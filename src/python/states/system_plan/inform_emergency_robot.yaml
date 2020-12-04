@@ -1,0 +1,10 @@
+name: inform_emergency_robot
+common:
+  formulations:
+    - I'll check which robots are available to resolve the {emergency}
+  transition_states:
+    - inform_moving
+    - db_query
+    - inform_robot_available
+subtask:
+  - extinguish

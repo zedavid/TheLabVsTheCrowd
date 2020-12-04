@@ -1,0 +1,6 @@
+name: "inform_lost_connection"
+common:
+  formulations:
+    - we have lost connection with {robot.name}
+  transition_states:
+    - request_robot_replacement

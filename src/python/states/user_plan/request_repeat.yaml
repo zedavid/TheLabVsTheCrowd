@@ -1,0 +1,5 @@
+name: request_repeat
+common:
+  formulations:
+    - Sorry, can you repeat that? [gesture.BrowFrown] <break time="150ms"/>
+    - Sorry, I couldn't understand that [gesture.BrowFrown] <break time="150ms"/>

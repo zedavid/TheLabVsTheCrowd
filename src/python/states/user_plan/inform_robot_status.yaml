@@ -1,0 +1,8 @@
+name: "inform_robot_status"
+common:
+  formulations:
+    - "{robot.name} [status_dynamic({robot.status})]"
+    - the robot [status_dynamic({robot.status})]
+
+slots:
+  - robot

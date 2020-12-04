@@ -1,0 +1,12 @@
+name: "inform_robot_capabilities"
+common:
+  formulations:
+    - "{robot} can {skill}"
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_location
+    - inform_robot_battery
+    - inform_robot_progress
+    - inform_robot_status
+    - inform_robot_velocity
+    - inform_moving

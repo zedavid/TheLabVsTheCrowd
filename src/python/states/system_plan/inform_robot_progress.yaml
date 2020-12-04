@@ -1,0 +1,8 @@
+name: "inform_robot_progress"
+common:
+  formulations:
+    - "{robot.name} progress is [progress_dynamic({robot.progress})]"
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity

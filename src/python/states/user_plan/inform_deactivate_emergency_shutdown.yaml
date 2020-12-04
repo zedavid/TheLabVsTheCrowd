@@ -1,0 +1,10 @@
+name: "inform_deactivate_emergency_shutdown"
+common:
+  formulations:
+    - I'm now deactivating emergency shutdown for {area}
+  transition_states:
+    - inform_mission_completed
+subtask:
+  - assess_damage
+slots:
+  - location

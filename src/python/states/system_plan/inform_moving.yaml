@@ -1,0 +1,15 @@
+name: "inform_moving"
+common:
+  formulations:
+    - should {robot.name} be sent to {area}?
+    - "{robot.name} is moving towards {area}"
+    - sending {robot.name} to {area}
+    - "{robot.name} is now heading to {area}"
+    - moving {robot.name} to {area}
+    - sending {robot.name} to the designated area
+    - moving {robot.name} to the designated area
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity
+    - inform_robot_wait

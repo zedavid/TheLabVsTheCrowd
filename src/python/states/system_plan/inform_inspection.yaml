@@ -1,0 +1,9 @@
+name: "inform_inspection"
+common:
+  formulations:
+    - Inspecting {area}
+    - "{robot.name} is going to inspect {area}"
+    - "{robot.name} is inspecting the area"
+    - "{robot.name} is inspecting the requested area"
+subtask:
+  - inspect

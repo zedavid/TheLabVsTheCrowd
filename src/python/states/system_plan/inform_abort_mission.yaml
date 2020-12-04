@@ -1,0 +1,5 @@
+name: "inform_abort_mission"
+common:
+  formulation:
+    - "{robot.name} mission will be aborted and will return to the dock"
+    - "{robot.name} is in {robot.status}"

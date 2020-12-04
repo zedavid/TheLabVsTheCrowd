@@ -1,0 +1,14 @@
+name: "inform_moving"
+common:
+  formulations:
+    - '|attend.left| sending the robot to the designated area'
+    - '|attend.left| moving {robot.name} to the designated area'
+    - '|attend.left| the robot is now heading to the emergency area'
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity
+    - inform_robot_wait
+slots:
+  - robot
+  - location

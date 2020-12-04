@@ -1,0 +1,5 @@
+name: "request_grounding_robot"
+common:
+  formulations:
+    - Please tell me which {robot.name} do you mean?
+    - Please tell me the info for {robot.name}?

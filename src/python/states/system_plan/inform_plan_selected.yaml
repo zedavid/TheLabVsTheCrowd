@@ -1,0 +1,10 @@
+name: "inform_plan_selected"
+common:
+  formulations:
+    - I came up with this plan using robots {robots}. This is the first step
+    - I have found {number_plans}
+  transition_states:
+    - inform_activate_emergency_shutdown
+    - request_pa_announcement
+subtask:
+  - inspect

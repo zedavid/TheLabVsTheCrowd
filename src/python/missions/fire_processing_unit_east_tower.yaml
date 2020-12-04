@@ -1,0 +1,35 @@
+emergency: fire
+emergency_severity: major
+area: pu_et
+symptom: smoke
+object: gc_et_1
+robot:
+  - hsk2:
+      - eta: "20 seconds"
+      - battery_level: high
+  - hsk1:
+      - eta: "20 seconds"
+      - battery_level: medium
+  - qdc1:
+      - eta: "15 seconds"
+      - battery_level: medium
+  - qdc2:
+      - eta: "10 seconds"
+      - battery_level: low
+plan:
+  - 1:
+    - robots:
+      - anm1
+      - qdc1
+      - hsk1
+weather:
+  wind:
+    direction: south east
+    speed: average
+spreading:
+  risk: considerable
+  object: pu_nt
+  time: 100
+risk_level: high
+damage_level: average
+mission_time: 200

@@ -1,0 +1,9 @@
+name: 'inform_robot_wait'
+common:
+  formulations:
+    - Please wait until the other robot has returned to the base to execute the requested action.
+  transition_states:
+    - inform_robot_wait
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity

@@ -1,0 +1,7 @@
+name: "db_query"
+common:
+  formulations:
+    - let me check that for you
+  transition_states:
+    - inform_robot_available
+    - inform_robot_not_available

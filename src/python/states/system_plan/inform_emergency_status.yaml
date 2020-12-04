@@ -1,0 +1,11 @@
+name: "inform_emergency_status"
+common:
+  formulations:
+    - The robot is reporting a {emergency_severity} {emergency} in the {object}
+    - A {emergency} in {object} has been reported by the robot. The {emergency} is {emergency_severity}
+  transition_states:
+    - inform_moving
+    - inform_robot_available
+    - inform_emergency_robot
+subtask:
+  - inspect

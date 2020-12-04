@@ -1,0 +1,9 @@
+name: "inform_robot_crash"
+common:
+  formulations:
+    - "<prosody rate=\"90%\" pitch=\"-5%\"> {robot.name} had a problem and won't be able to recover </prosody><break time=\"150ms\"/>"
+    - "<prosody rate=\"90%\" pitch=\"-5%\"> {robot.name} had a problem and won't be able to recover </prosody>. It is currently at {robot.location} <break time=\"150ms\"/>"
+  transition_states:
+    - inform_moving
+slots:
+  - robot

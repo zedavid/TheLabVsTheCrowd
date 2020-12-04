@@ -1,0 +1,7 @@
+name: "inform_damage_inspection"
+common:
+  formulations:
+    - sending {robot.name} to inspect the damage
+    - "{robot.name} is now going to analyse damage in {area}"
+subtask:
+  - assess_damage

@@ -1,0 +1,6 @@
+name: "request_grounding_robot"
+common:
+  formulations:
+    - Sorry, can you tell me which robot do you mean? |gesture.BrowFrown|
+slots:
+  - robot

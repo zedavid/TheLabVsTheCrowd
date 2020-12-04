@@ -1,0 +1,7 @@
+name: "inform_battery_loss"
+common:
+  formulations:
+    - "{robot.name} has suddenly lost its battery"
+  transition_states:
+    - inform_robot
+    - request_robot_replacement

@@ -1,0 +1,11 @@
+name: request_robot_inspect_damage
+common:
+  formulations:
+    - Which robot should we send to inspect the damage?
+    - Which robot should we send to inspect the damage caused?
+  transition_states:
+    - db_query
+    - inform_moving
+    - inform_robot_not_available
+subtask:
+  - assess_damage

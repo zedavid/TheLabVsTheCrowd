@@ -1,0 +1,6 @@
+name: "intro_hello"
+common:
+  formulations:
+    - Hi, my name is Fred, and I'm your emergency assistant
+  transition_states:
+    - inform_alert_emergency

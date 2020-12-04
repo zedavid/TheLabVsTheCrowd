@@ -1,0 +1,7 @@
+name: request_attention
+common:
+  formulations:
+    - '|attend.around| Are you there?'
+  transition_states:
+    - request_attention
+    - inform_alert_emergency

@@ -1,0 +1,10 @@
+name: inform_damage_inspection_robot
+common:
+  formulations:
+    - I'll check which robots are available to inspect {area}
+  transition_states:
+    - inform_damage_inspection
+    - db_query
+    - inform_robot_available
+subtask:
+  - assess_damage

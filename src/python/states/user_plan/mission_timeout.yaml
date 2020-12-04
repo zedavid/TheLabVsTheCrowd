@@ -1,0 +1,4 @@
+name: "mission_timeout"
+common:
+  formulations:
+    - "|expression.ExpressAnger| <prosody volume=\"x-loud\" rate=\"110%\" pitch=\"+15%\">The time for the mission has passed. </prosody> <prosody volume=\"x-loud\" rate=\"110%\" pitch=\"+25%\"> Please proceed to evacuation.</prosody>"

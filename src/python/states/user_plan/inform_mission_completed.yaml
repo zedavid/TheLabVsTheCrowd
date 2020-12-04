@@ -1,0 +1,7 @@
+name: "inform_mission_completed"
+common:
+  formulations:
+    - '|gesture.BigSmile| mission completed. <prosody volume="loud" rate="90%" pitch="+10%"> well done! </prosody>'
+    - '<prosody volume="loud" rate="90%" pitch="+10%"> mission completed with success! </prosody> |gesture.BigSmile|'
+subtask:
+  - assess_damage

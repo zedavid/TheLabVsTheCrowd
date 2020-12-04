@@ -1,0 +1,13 @@
+name: "inform_activate_emergency_shutdown"
+common:
+  formulations:
+    - First, I'm activating emergency shutdown
+  transition_states:
+    - inform_moving
+    - request_robot_type
+    - inform_robot_available
+    - request_pa_announcement
+subtask:
+  - inspect
+slots:
+  - location

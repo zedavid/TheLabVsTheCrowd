@@ -1,0 +1,9 @@
+name: "inform_returning_to_base"
+common:
+  formulations:
+    - returning {robot.name} to base
+    - robots already at base
+  transition_states:
+    - inform_mission_completed
+subtask:
+  - assess_damage

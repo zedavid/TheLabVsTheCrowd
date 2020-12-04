@@ -1,0 +1,4 @@
+fire_xmas_tree_west_tower_orca_52_g_home
+fire_xmas_tree_north_tower_orca_64_furhat
+fire_xmas_tree_north_tower_orca_69_furhat
+fire_xmas_tree_west_tower_orca_70_furhat

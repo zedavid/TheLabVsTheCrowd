@@ -1,0 +1,14 @@
+name: "request_pa_announcement"
+common:
+  formulations:
+    - Do you want to make a PA announcement to evacuate {area}?
+    - Do you want to make a PA announcement to evacuate the area?
+  transition_states:
+    - inform_activate_emergency_shutdown
+    - inform_symptom
+    - request_robot_type
+    - inform_moving
+subtask:
+  - inspect
+slots:
+  - location

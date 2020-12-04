@@ -1,0 +1,11 @@
+name: "inform_emergency_solved"
+common:
+  formulations:
+    - the {emergency} seems to be resolved
+    - the {emergency} has been resolved
+    - the {emergency} has been extinguished
+  transition_states:
+    - inform_damage_inspection_robot
+    - inform_damage_inspection
+subtask:
+  - extinguish

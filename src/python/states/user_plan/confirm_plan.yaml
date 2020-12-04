@@ -1,0 +1,6 @@
+name: "confirm_plan"
+common:
+  formulations:
+    - Do you agree with this plan?
+  transition_states:
+    - inform_moving

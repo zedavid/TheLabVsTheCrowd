@@ -1,0 +1,6 @@
+name: "inform_battery_loss"
+common:
+  formulations:
+    - "{robot.name} has lost its battery. It is going back to its charging station to charge."
+slots:
+  - robot

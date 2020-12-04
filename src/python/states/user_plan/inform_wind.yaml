@@ -1,0 +1,4 @@
+name: "inform_wind"
+common:
+  formulations:
+    - there is {wind.direction} wind with {wind.speed} speed

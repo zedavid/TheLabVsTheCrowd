@@ -1,0 +1,8 @@
+name: 'inform_robot_not_available'
+common:
+  formulations:
+    - "{robot.name} is not able to perform the selected task. Please choose a different robot."
+  transition_sates:
+    - inform_robot_available
+    - inform_moving
+    - inform_robot_not_available

@@ -1,0 +1,10 @@
+name: "inform_emergency_solved"
+common:
+  formulations:
+    - <prosody volume="loud" rate="90%" pitch="+10%"> |gesture.BigSmile| the {emergency} seems to be resolved </prosody>
+    - <prosody volume="loud" rate="90%" pitch="+10%"> |gesture.BigSmile| the {emergency} has been resolved </prosody>
+    - <prosody volume="loud" rate="90%" pitch="+10%"> |gesture.BigSmile| the {emergency} has been extinguished </prosody>
+  transition_states:
+    - request_robot_inspect_damage
+subtask:
+  - extinguish

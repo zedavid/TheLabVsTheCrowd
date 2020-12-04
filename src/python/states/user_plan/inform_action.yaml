@@ -1,0 +1,14 @@
+name: "inform_action"
+common:
+  formulations:
+    - "{robot.name} is {action}"
+    - "{robot.name} is {action} from {object}"
+    - "{action} {robot.name} to {object}"
+    - "{robot.name} is {action} of {object}"
+  transition_states:
+    - inform_moving
+    - inform_arrival
+    - request_end_mission
+slots:
+  - robot
+  - location

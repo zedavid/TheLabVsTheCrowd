@@ -1,0 +1,11 @@
+name: "inform_robot_eta"
+common:
+  formulations:
+    - "e tee a is [eta_dynamic({robot.eta})]"
+    - "{robot.name}'s e tee a is [eta_dynamic({robot.eta})]"
+    - "e tee a to {area} is [eta_dynamic({robot.eta})]"
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity
+

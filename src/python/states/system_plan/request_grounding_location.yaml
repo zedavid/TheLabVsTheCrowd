@@ -1,0 +1,5 @@
+name: "request_grounding_location"
+common:
+  formulations:
+    - Please tell me which {element} do you mean?
+    - Please tell me the infor for {element}?

@@ -1,0 +1,5 @@
+name: "inform_robot_status"
+common:
+  formulation:
+    - "{robot.name} is [status_dynamic({robot.status})]"
+    - "{robot.name} is [status_dynamic({robot.status})] executing {mission_name}"

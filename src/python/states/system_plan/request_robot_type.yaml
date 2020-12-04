@@ -1,0 +1,11 @@
+name: "request_robot_type"
+common:
+  formulations:
+    - shoud we send a {robot_types} robot to inspect the area?
+  transition_states:
+    - db_query
+    - inform_moving
+    - inform_robot_not_available
+subtask:
+  - assess_damage
+  - inspect

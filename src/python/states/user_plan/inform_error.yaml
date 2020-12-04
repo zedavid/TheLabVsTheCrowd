@@ -1,0 +1,4 @@
+name: "inform_error"
+common:
+  formulations:
+    - Oops <break time="250ms"/>, |expression.ExpressSad| there was an error in the execution

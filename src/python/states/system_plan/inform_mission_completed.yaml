@@ -1,0 +1,8 @@
+name: "inform_mission_completed"
+common:
+  formulations:
+    - mission completed!
+  transition_states:
+    - inform_returning_to_base
+subtask:
+  - assess_damage

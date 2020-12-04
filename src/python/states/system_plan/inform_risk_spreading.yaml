@@ -1,0 +1,4 @@
+name: "inform_risk_spreading"
+common:
+  formulations:
+    - there is a {spreading.risk} risk that the {emergency} spreads to {spreading.object}

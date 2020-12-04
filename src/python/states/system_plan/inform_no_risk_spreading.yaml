@@ -1,0 +1,4 @@
+name: inform_no_risk_spreading
+common:
+  formulations:
+    - There is currently no risk of {emergency} spreading to the rest of the rig

@@ -1,0 +1,9 @@
+name: 'inform_robot_wait'
+common:
+  formulations:
+    - Please wait until {robot_moving} has returned to the base to send {robot_wait}.
+  transition_states:
+    - inform_robot_wait
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity

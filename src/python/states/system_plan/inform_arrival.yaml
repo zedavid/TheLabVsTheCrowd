@@ -1,0 +1,10 @@
+name: "inform_arrival"
+common:
+  formulations:
+    - "{robot.name} has arrived to {area}"
+    - "{robot.name} is approaching {area}"
+  transition_states:
+    - inform_robot_status
+    - inform_inspection
+    - inform_emergency_action
+    - inform_damage_inspection

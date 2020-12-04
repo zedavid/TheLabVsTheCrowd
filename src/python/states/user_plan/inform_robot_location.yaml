@@ -1,0 +1,10 @@
+name: "inform_robot_location"
+common:
+  formulations:
+    - "{robot.name} is [status_dynamic({robot.status})] at {robot.location}"
+  transition_states:
+    - inform_robot_eta
+    - inform_robot_progress
+    - inform_robot_velocity
+slots:
+  - robot

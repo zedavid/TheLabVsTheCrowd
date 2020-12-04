@@ -1,0 +1,8 @@
+name: "inform_symptom"
+conditions:
+  formulations:
+    - "{symptom} was detected"
+    - "there is a {symptom} in {area}"
+  transition_states:
+    - inform_plan_selected
+    - request_pa_announcement

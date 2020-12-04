@@ -1,0 +1,14 @@
+name: "inform_inspection"
+common:
+  formulations:
+    - '|attend.left| Performing inspection'
+    - '|attend.left| The robot is going to start the inspection'
+    - '|attend.left| {robot.name} is inspecting the area'
+    - '|attend.left| Inspecting {area}'
+  transition_states:
+    - inform_robot_status
+subtask:
+  - inspect
+slots:
+  - robot
+  - location

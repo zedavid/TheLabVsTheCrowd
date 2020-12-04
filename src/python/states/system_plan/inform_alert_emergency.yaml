@@ -1,0 +1,12 @@
+name: "inform_alert_emergency"
+common:
+  formulations:
+    - <expression.ExpressFear> emergency alarm went off in {area}. We have {mission_time} to avoid evacuation
+  transition_states:
+    - inform_symptom
+    - inform_plan_selected
+    - inform_activate_emergency_shutdown
+    - request_plan_responsible
+    - request_pa_announcement
+subtask:
+  - inspect

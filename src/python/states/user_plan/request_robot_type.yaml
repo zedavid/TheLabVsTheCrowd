@@ -1,0 +1,8 @@
+name: "request_robot_type"
+common:
+  formulations:
+    - what type of robot do you want to use to perform the inspection?
+  transition_states:
+    - db_query
+    - inform_moving
+    - inform_robot_not_available

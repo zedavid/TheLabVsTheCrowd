@@ -1,0 +1,4 @@
+name: "start"
+common:
+  transition_states:
+    - intro_hello

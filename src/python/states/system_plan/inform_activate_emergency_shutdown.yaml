@@ -1,0 +1,10 @@
+name: "inform_activate_emergency_shutdown"
+conditions:
+  formulations:
+    - Should I activate the emergency shutdown for {area}?
+  transition_states:
+    - inform_moving
+    - request_robot_type
+    - request_pa_announcement
+subtask:
+  - inspect

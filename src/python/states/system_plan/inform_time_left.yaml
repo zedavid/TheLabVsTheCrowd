@@ -1,0 +1,5 @@
+name: "inform_time_left"
+common:
+  formulations:
+    - There is still {time_left} before evacuation
+    - We still have {time_left} before evacuation

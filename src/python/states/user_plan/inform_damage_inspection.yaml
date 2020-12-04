@@ -1,0 +1,10 @@
+name: "inform_damage_inspection"
+common:
+  formulations:
+    - '|attend.left| sending {robot.name} to inspect the damage'
+    - '|attend.left| the robot is now going to analyse damage'
+subtask:
+  - assess_damage
+slots:
+  - robot
+  - location

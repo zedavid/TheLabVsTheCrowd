@@ -1,0 +1,4 @@
+name: "mission_timeout"
+common:
+  formulations:
+    - The time for the mission has passed. Please procede to evacuation.

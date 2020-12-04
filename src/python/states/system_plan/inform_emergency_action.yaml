@@ -1,0 +1,10 @@
+name: "inform_emergency_action"
+common:
+  formulations:
+    - activating {robot.emergency_device}
+    - I'm activating the {robot.emergency_device} in {robot.name}
+    - "{robot.name} is now going to activate the {robot.emergency_device}"
+    - should {robot.emergency_device} be activated?
+    - "should {robot.name}'s {robot.emergency_device} be activated?"
+subtask:
+  - extinguish

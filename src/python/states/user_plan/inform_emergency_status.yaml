@@ -1,0 +1,11 @@
+name: "inform_emergency_status"
+common:
+  formulations:
+    - "<break time=\"250ms\"/><prosody volume=\"x-loud\" rate=\"110%\" pitch=\"+5%\"> |gesture.Surprise| The robot is reporting a {emergency_severity} {emergency} in the {object}</prosody>"
+    - "<break time=\"250ms\"/><prosody volume=\"x-loud\" rate=\"110%\" pitch=\"+5%\"> |gesture.Surprise| A {emergency} in {object} has been reported by the robot</prosody>. The {emergency} is {emergency_severity}"
+  transition_states:
+    - request_robot_emergency
+subtask:
+  - inspect
+slots:
+  - location

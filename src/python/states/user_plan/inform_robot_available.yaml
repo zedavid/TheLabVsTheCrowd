@@ -1,0 +1,8 @@
+name: "inform_robot_available"
+common:
+  formulations:
+    - "{robot.name} is available"
+  transition_states:
+    - inform_moving
+slots:
+  - robot

@@ -1,0 +1,5 @@
+name: "inform_robot_crash"
+common:
+  formulations:
+    - "{robot} had a problem and won't be able to recover"
+    - "{robot} had a problem and won't be able to recover. It is currently at {robot.location}"

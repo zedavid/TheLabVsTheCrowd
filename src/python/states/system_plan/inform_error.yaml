@@ -1,0 +1,4 @@
+name: "inform_error"
+common:
+  formulations:
+    - Oops, there was an error in the execution

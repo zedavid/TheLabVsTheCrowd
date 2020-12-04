@@ -1,0 +1,9 @@
+name: "inform_robot_capabilities"
+common:
+  formulations:
+    - "{robot.name} can {robot.skill}"
+  transition_states:
+    - inform_moving
+    - inform_emergency_action
+slots:
+  - robot

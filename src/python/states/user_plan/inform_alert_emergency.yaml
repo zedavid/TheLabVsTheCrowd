@@ -1,0 +1,14 @@
+name: "inform_alert_emergency"
+common:
+  formulations:
+    - "|expression.ExpressFear| <prosody volume=\"x-loud\" rate=\"110%\" pitch=\"+5%\"> emergency alarm went off in {area}. We have [time_left_dynamic({time_left})] to avoid evacuation</prosody>"
+  transition_states:
+    - inform_symptom
+    - inform_moving
+    - inform_activate_emergency_shutdown
+    - request_pa_announcement
+    - request_robot_type
+subtask:
+  - inspect
+slots:
+  - location

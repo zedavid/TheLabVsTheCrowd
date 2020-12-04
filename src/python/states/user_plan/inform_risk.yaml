@@ -1,0 +1,13 @@
+name: inform_risk
+common:
+  formulations:
+    - there is a {risk_level} risk of collapse. The area needs further inspection
+    - there is a {risk_level} risk of collapse. {area} needs to be further inspected
+  transition_states:
+    - inform_mission_completed
+    - inform_returning_to_base
+    - inform_deactivate_emergency_shutdown
+subtask:
+  - assess_damage
+slots:
+  - location

@@ -1,0 +1,10 @@
+name: request_robot_emergency
+common:
+  formulations:
+    - Which robot should we send to put out the {emergency}?
+  transition_states:
+    - db_query
+    - inform_moving
+    - inform_robot_not_available
+subtask:
+  - extinguish

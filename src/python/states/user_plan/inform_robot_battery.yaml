@@ -1,0 +1,6 @@
+name: "inform_robot_battery"
+common:
+  formulations:
+    - "{robot.name} has [battery_level_dynamic({robot.battery_level})] battery level"
+slots:
+  - robot

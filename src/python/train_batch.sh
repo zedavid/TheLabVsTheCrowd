@@ -11,10 +11,17 @@ then
     exit 1
 fi
 
+if [ -z "$3" ]
+then
+  runs=1
+else
+  runs=$3
+fi
+
 features=( "bow previous_action nlu"
     "wrd_emb_gn bow previous_action nlu"
     "bow action_mask previous_action nlu"
-    "wrd_emb_gn.bow action_mask previous_action nlu")
+    "wrd_emb_gn bow action_mask previous_action nlu")
 
 if [[ $2 == *"mturk"* ]]
 then
@@ -29,14 +36,24 @@ then
 
     for feature in "${features[@]}"
     do
-          python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature}
+          if [ -z "$4" ]
+          then
+            python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} --average_runs $runs
+          else
+            python train.py -d ../../data/${train_dir}/ -t $4 --experimental-condition $2 --features ${feature} --average_runs $runs
+          fi
           # check if succeed
           if [ $? -eq 0 ]
           then
               echo OK: ${feature} / train size: 147
           else
               echo ERROR
-              echo Command: train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature}
+              if [ -z "$4" ]
+              then
+                echo Command: train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} --average_runs $runs
+              else
+                echo Command: train.py -d ../../data/${train_dir}/ -t $4 --experimental-condition $2 --features ${feature} --average_runs $runs
+              fi
               exit 1
           fi
     done;
@@ -48,17 +65,26 @@ then
 
     for feature in "${features[@]}"
     do
-        python python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam /data/orca_dact.lm
-
-            # check if succeed
-            if [ $? -eq 0 ]
+        if [ -z "$4" ]
+        then
+          python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ../../data/orca_dact_embodiment_new.lm -g --average_runs $runs
+        else
+          python train.py -d ../../data/${train_dir}/ -t $4 --experimental-condition $2 --features ${feature} -dam ../../data/orca_dact_embodiment_new.lm -g --average_runs $runs
+        fi
+        # check if succeed
+        if [ $? -eq 0 ]
+        then
+            echo OK: ${feature} / train size: 147
+            read -p "Press return to continue"
+        else
+            echo ERROR
+            if [ -z "$4" ]
             then
-                echo OK: ${feature} / train size: 147
-                read -p "Press return to continue"
+              echo Command: python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ../../data/orca_dact_embodiment_new.lm -g --average_runs $runs
             else
-                echo ERROR
-                echo Command: python train.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam /data/orca_dact.lm -g
-                exit 1
+              echo Command: python train.py -d ../../data/${train_dir}/ -t $4 --experimental-condition $2 --features ${feature} -dam ../../data/orca_dact_embodiment_new.lm -g --average_runs $runs
             fi
+            exit 1
+        fi
     done;
 fi

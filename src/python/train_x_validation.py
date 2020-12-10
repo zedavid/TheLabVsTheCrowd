@@ -62,14 +62,14 @@ if __name__ == "__main__":
     if args.features:
         args.features.sort()
         model_info.feature_set = args.features
-        models_dir = os.path.join(args.datadir, model_info.config, '.'.join(args.features))
+        models_dir = os.path.join(task_dir, model_info.config, '.'.join(args.features))
     else:
         for fragment in args.datadir.split(os.sep):
             if '.' in fragment:
                 model_info.feature_set = fragment.split('.')
                 args.features = model_info.feature_set
                 break
-        models_dir = os.path.join(args.datadir, model_info.config)
+        models_dir = os.path.join(task_dir, model_info.config)
 
     print(model_info.feature_set)
 
@@ -99,6 +99,8 @@ if __name__ == "__main__":
 
     subsets_file_lists = {}
 
+    print(task_dir)
+
     for root, dir, files in os.walk(task_dir):
         if '.'.join(args.features) not in root.split(os.sep):
             continue
@@ -106,7 +108,6 @@ if __name__ == "__main__":
         if folder in ['train', 'dev']:
             key = 'train_cv' if folder == 'train' else 'val_cv'
             subsets_file_lists[key] = [os.path.join(root, feature_file) for feature_file in files]
-
 
     for subs in subsets_file_lists:
         if len(subsets_file_lists[subs]) == 0:
@@ -224,7 +225,7 @@ if __name__ == "__main__":
     # Plot normalized confusion matrix
     cm, classes = hcn_utils.plot_confusion_matrix(outputs['y_true_all'], outputs['y_pred_all'], classes=available_actions,
                                                   normalize=True, title='Normalised DAct confusion',
-                                                  nly_existing_classes=True)
+                                                  only_existing_classes=True)
 
     with open(os.path.join(models_dir, 'actions.txt'),'w') as fp:
         fp.write('\n'.join(classes))
@@ -236,7 +237,6 @@ if __name__ == "__main__":
 metrics['avg_length_mission_succ'] = list(filter(lambda a: a != 0.0, metrics['avg_length_mission_succ']))
 
 utils.print_dict(model_info.__dict__)
-input()
 
 logger.info('Results of the {}-fold speaker out validation: '.format(len(all_speakers)))
 logger.info('Turn accuracy: {:.4f}'.format(sum(metrics['turn_accuracy'])/len(metrics['turn_accuracy'])))
@@ -250,3 +250,5 @@ logger.info('TRL {:.4f}'.format(sum(metrics['avg_length_mission'])/len(metrics['
 logger.info('TRL Succ {:.4f}'.format(sum(metrics['avg_length_mission_succ'])/len(metrics['avg_length_mission_succ']) if len(metrics['avg_length_mission_succ']) > 0 else 0.0))
 logger.info('DA perplexity {:.4f}'.format(sum(metrics['da_perplexity'])/len(metrics['da_perplexity'])))
 logger.info('Diff DA perplexity {:.4f}'.format(sum(metrics['diff_da_perplexity'])/len(metrics['diff_da_perplexity'])))
+
+input('Check metrics before starting the next feature combination')

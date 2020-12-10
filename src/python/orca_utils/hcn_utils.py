@@ -252,8 +252,7 @@ def train_model(output_dir,
                           validation_data=(np.concatenate([x_val[f] for f in x_val if f in model_info.feature_set],axis=-1), y_val),
                           verbose=1)
 
-                prediction = model.predict(np.concatenate([x_val[f] for f in x_val if f in model_info.feature_set],axis=-1),
-                                           batch_size=model_info.batch_size, verbose=1)
+                prediction = model.predict(np.concatenate([x_val[f] for f in x_val if f in model_info.feature_set],axis=-1), batch_size=model_info.batch_size, verbose=1)
             else:
                 model.fit(x_train,y_train,
                           batch_size=model_info.batch_size,
@@ -263,7 +262,7 @@ def train_model(output_dir,
 
             acc, acc_replace, task_acc, dialogue_acc, \
             end_state_succ, correct_outcome, turns_m, situated_succ, perplex, d_perplex, \
-            turns_m_all, acc_merged_updates, test_output, pred_output = compute_scores(y_val,
+            turns_m_all, acc_merged_updates, test_output, pred_output, collaborative_ts = compute_scores(y_val,
                                                                       x_val,
                                                                       prediction,
                                                                       dialogue_setting,
@@ -273,12 +272,7 @@ def train_model(output_dir,
                                                                       'train',
                                                                       os.sep.join(log_dir.split(os.sep)[:-1]))
 
-            print('Epoch {}/{} - Accuracy {} - Accuracy (ent) {} - Perplexity {} - Task Success {}'.format(i + 1,
-                                                                                                              model_info.epochs,
-                                                                                                              acc,
-                                                                                                              acc_replace,
-                                                                                                              perplex,
-                                                                                                              task_acc))
+            print(f"Epoch {i + 1}/{model_info.epochs} - Accuracy {acc} - Accuracy (ent) {acc_replace} - Perplexity {perplex} - Task Success {task_acc}")
             if acc > turn_acc:
                 logging.info("Improved turn accuracy, saving model from epoch {}".format(i))
                 turn_acc = acc
@@ -326,9 +320,8 @@ def test_model(model_info,
         logging.error('No weigths file: {}'.format(model_path))
         input()
 
-    if isinstance(x_test,dict): #or model_info.sep_features:
+    if isinstance(x_test,dict):
         y_pred = model.predict(np.concatenate([x_test[f] for f in x_test if f in model_info.feature_set],axis=-1))
-        #x_test = list(x_test.values())
     else:
         y_pred = model.predict(x_test)
 
@@ -337,7 +330,7 @@ def test_model(model_info,
         dialogue_success, end_state_succ, corr_outcome, \
         turns_m, situated_succ, perplex, d_perplex, \
         acc_merged_updates, turns_m_all, \
-        test_output, pred_output = compute_scores(y_test,
+        test_output, pred_output, collaborative_ts = compute_scores(y_test,
                                                 x_test,
                                                 y_pred,
                                                 dialogue_setting,
@@ -353,7 +346,7 @@ def test_model(model_info,
         dialogue_success, end_state_succ, corr_outcome,  \
         turns_m, situated_succ, perplex, d_perplex, \
         acc_merged_updates,turns_m_all, \
-        test_output, pred_output = compute_scores(y_test,
+        test_output, pred_output, collaborative_ts = compute_scores(y_test,
                                                 x_test,
                                                 y_pred,
                                                 dialogue_setting,
@@ -367,7 +360,7 @@ def test_model(model_info,
     return acc_no_ent, acc_ent, mission_success,\
            end_state_succ, corr_outcome, situated_succ, turns_m, \
            perplex, d_perplex, turns_m_all, acc_merged_updates, \
-           test_output, pred_output
+           test_output, pred_output, collaborative_ts
 
 def plot_confusion_matrix(y_true, y_pred, classes,
                           normalize=False,
@@ -517,17 +510,13 @@ def compute_scores(y_test,
     situated_da_success = []
     d_perplex = []
     preplex_diff = []
+    collaborative_task_success = []
 
     actions_test = []
     actions_pred = []
 
     if model_info.generate_output and mode != 'train':
-        if model_info.use_am_inference:
-            generate_output = f"{'.'.join(model_info.feature_set)}_{model_info.config}_am_inf"
-        else:
-            generate_output = '{}_{}'.format(
-                '.'.join(model_info.feature_set),
-                model_info.config)
+        generate_output = '{}_{}'.format('.'.join(model_info.feature_set), model_info.config)
     else:
         generate_output = None
 
@@ -558,11 +547,7 @@ def compute_scores(y_test,
 
             if not os.path.isdir(os.path.join(log_dir,'generated',generate_output)):
                 os.makedirs(os.path.join(log_dir,'generated',generate_output))
-            if model_info.use_predicted_action:
-                output_file_generated_dialogue = os.path.join(log_dir, 'generated', generate_output,
-                                                              f"{dialogue_log['dialogue_id']}.ppa.json")
-            else:
-                output_file_generated_dialogue = os.path.join(log_dir,'generated',generate_output,f"{dialogue_log['dialogue_id']}.json")
+            output_file_generated_dialogue = os.path.join(log_dir,'generated',generate_output,f"{dialogue_log['dialogue_id']}.json")
 
             if DEBUG:
                 print(output_file_generated_dialogue)
@@ -589,7 +574,6 @@ def compute_scores(y_test,
         for t in range(test.shape[1]):
 
             if isinstance(x_test, list):
-                #if concatenated depth is used
                 mask_vector_test = x_test[1][d][t]
             elif isinstance(x_test, dict):
                 for f in x_test:
@@ -726,10 +710,10 @@ def compute_scores(y_test,
                                 input()
 
                 if t > 0:
-                    if all_turns[t]['current_state'] in ['inform_moving','inform_robot_eta','inform_arrival','inform_inspection',
-                                                            'inform_damage_inspection_robot','inform_returning_to_base',
-                                                            'inform_robot_battery','inform_robot_progress','inform_robot_velocity',
-                                                            'inform_robot_status']:
+                    if all_turns[t]['current_state'] in ['inform_moving','inform_robot_eta','inform_arrival',
+                                                        'inform_inspection','inform_damage_inspection_robot',
+                                                        'inform_returning_to_base','inform_robot_battery',                                                           'inform_robot_progress','inform_robot_velocity',
+                                                        'inform_robot_status']:
                         if pred[d,t] == test[d, t]:
                             situated_da_success.append(1)
                             gen_turn_dict['situated_da'] = True
@@ -811,6 +795,15 @@ def compute_scores(y_test,
                     generated_dialogue['correct_outcome'] = False
                     generated_dialogue['expected_outcome'] = gt_dialogue_success
                     generated_dialogue['achieved_outcome'] = mission_success[-1]
+
+            if gt_dialogue_success:
+                # if the gt dialogue is successful then check if the output of
+                # the model is also success. Else give a 0
+                if gt_dialogue_success == mission_success[-1]:
+                    collaborative_task_success.append(1)
+                else:
+                    collaborative_task_success.append(0)
+                # do not add anything to collaborative_task_success otherwise
         else:
             correct_outcome.append(0) #no meaning at all in this case
 
@@ -836,11 +829,6 @@ def compute_scores(y_test,
         if generate_output:
             generated_dialogue['turn_accuracy'] = accuracy_score(d_actions_test,d_actions_pred)
             generated_dialogue['turn_accuracy_merged_updates'] = sum(turn_acc_updates_merged)/len(turn_acc_updates_merged)
-            if model_info.use_am_inference:
-                generated_dialogue['turn_accuracy_no_action_mask'] = accuracy_score(d_actions_test,d_actions_pred_no_am)
-                if DEBUG and generated_dialogue['turn_accuracy_no_action_mask'] > generated_dialogue['turn_accuracy']:
-                    utils.print_dict(generated_dialogue)
-                    input(generated_dialogue['dialogue_id'])
 
         if lm_dacts:
             d_prob_pred = lm_dacts.p(' '.join([t['d_act_pred'] for t in generated_dialogue['turns']]))
@@ -876,4 +864,5 @@ def compute_scores(y_test,
            sum(preplex_diff)/len(preplex_diff),\
            sum(turn_acc_updates_merged)/len(turn_acc_updates_merged),\
            turns_mission_success_succ_d,\
-           actions_pred,actions_test
+           actions_pred,actions_test,\
+           sum(collaborative_task_success) / len(collaborative_task_success) if len(collaborative_task_success) > 0 else np.nan

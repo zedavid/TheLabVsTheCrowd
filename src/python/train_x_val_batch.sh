@@ -53,7 +53,7 @@ then
 
     for feature in "${features[@]}"
     do
-        train_x_validation.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ${dam} -g
+        python train_x_validation.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ${dam} -g
         # check if succeed
         if [ $? -eq 0 ]
         then
@@ -61,7 +61,7 @@ then
             read -p "Press return to continue"
         else
             echo ERROR
-            echo Command: train_x_validation.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ${dam} -g
+            echo Command: python train_x_validation.py -d ../../data/${train_dir}/ --experimental-condition $2 --features ${feature} -dam ${dam} -g
             exit 1
         fi
     done;

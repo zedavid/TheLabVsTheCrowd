@@ -1,10 +1,11 @@
 import argparse,os,logging
 import pickle
 
-import sys
+import sys,shutil
 import arpa
 import numpy as np
 from numpy import random
+import random
 
 import matplotlib.pyplot as plt
 
@@ -12,8 +13,27 @@ from orca_utils import rig_utils, hcn_utils, nlg_utils, dialogue_utils, dialogue
 
 DEBUG = False
 
+def shuffle_train_dev(trainset, devset):
+    # randomise splits, keeping same dev amount of dialogues (8)
+    logging.info(f'Shuffling train and dev sets')
+    all_files = trainset + devset
+    dev_length = len(devset)
+    dev_length = 8 if dev_length > 8 else dev_length
+    new_devset = random.choices(all_files, k=dev_length)
+    new_trainset = [file for file in all_files if file not in new_devset]
+    if len(new_devset) + len(new_trainset) != len(all_files):
+        logging.error(
+            f'Size of the new splits ({len(new_devset) + len(new_trainset)}) '
+            f'don\'t match dataset: {len(all_files)}')
+        return shuffle_train_dev(trainset, devset)
+
+    random.shuffle(new_trainset)
+
+    return new_trainset, new_devset
+
 parser = argparse.ArgumentParser(description='Trains LSTM for an Hybrid Code Network')
 parser.add_argument('--datadir','-d',type=str,help='Folder where the data is stored',required=True)
+parser.add_argument('--test-dir','-t',dest='test_dir', type=str, help='Folder where the test data is placed')
 parser.add_argument('--epochs','-e',type=int,help='Number of epochs used',default=12)
 parser.add_argument('--layer_sizes','-l',type=int,nargs='+',help='Units per layer',default=[128])
 parser.add_argument('--simulation_environment', '-se', type=str,
@@ -27,10 +47,11 @@ parser.add_argument('--states','-s',type=str,help='path to the directory where t
 parser.add_argument('--batch_size','-bs',type=int,help='number of batches used in the training procedure',default=3)
 parser.add_argument('--dact_lm','-dam',type=str,help='path to the lm trained with the dialogue acts')
 parser.add_argument('--stop_criterium', '-st', type=str, help='stop criterium', default='own_metric')
-parser.add_argument('--overfit','-o',action='store_true',help='uses train as test set to check if overfits')
 parser.add_argument('--generate_dialogues', '-g', action='store_true', help='generate output dialogues')
 parser.add_argument('--features','-f',type=str,nargs='+',help='features to be used',default=['bow','previous_action', 'nlu'])
 parser.add_argument('--dataset_limit_train','-dl', type=int, help='max number of instances in the train dataset', default=None)
+parser.add_argument('--average_runs', '-avg', type=int,
+                    help='Averages the output metrics across several runs', default=1)
 
 random.seed(42)
 
@@ -52,6 +73,7 @@ model_info.stop_criterium = args.stop_criterium
 model_info.generate_output = args.generate_dialogues
 
 task_dir = os.path.join(args.datadir, args.exp_cond)
+args.features.sort()
 features_dir = os.path.join(task_dir,'.'.join(args.features))
 
 subsets_file_lists = {}
@@ -122,32 +144,75 @@ else:
             break
     models_dir = os.path.join(args.datadir, model_info.config)
 
+if args.test_dir is None:
+    args.test_dir = task_dir
+
 model_info.n_classes = len(available_actions)
 
-hcn_utils.train_model(models_dir,
-                      f"{'_'.join(model_info.feature_set)}",
-                      model_info,
-                      subsets_file_lists['train'],
-                      subsets_file_lists['dev'],
-                      dialogue_settings,
-                      log_dir=task_dir,
-                      action_set=available_actions)
+metrics = {'turn_accuracy': [],
+           'turn_accuracy_ent': [],
+           'turn_accuracy_usr': [],
+           'turn_accuracy_mu': [],
+           'situated_da_success': [],
+           'da_perplexity': [],
+           'diff_da_perplexity': [],
+           'mission_success': [],
+           'end_state_success': [],
+           'correct_output': [],
+           'collaborative_ts': [],
+           'avg_length_mission': [],
+           'avg_length_mission_succ': []}
 
-ta, ta_ent, m_s, \
-end_s, correct_output, situated_succ, turns_m, \
-perplex, d_perplex, turns_m_all, ta_merged_updates, \
-y_test, y_pred = hcn_utils.test_model(model_info,
+outputs = {'y_true_all': [],
+           'y_pred_all': []}
+
+for i in range(args.average_runs):
+    if args.average_runs > 1:
+        # need to remove the folder if we are looping so it trains again
+        shutil.rmtree(models_dir)
+        subsets_file_lists['train'], subsets_file_lists['dev'] = shuffle_train_dev(
+            subsets_file_lists['train'], subsets_file_lists['dev'])
+
+    hcn_utils.train_model(models_dir,
+                          f"{'_'.join(model_info.feature_set)}",
+                          model_info,
+                          subsets_file_lists['train'],
+                          subsets_file_lists['dev'],
+                          dialogue_settings,
+                          log_dir=task_dir,
+                          action_set=available_actions)
+
+    ta, ta_ent, m_s, \
+    end_s, correct_output, situated_succ, turns_m, \
+    perplex, d_perplex, turns_m_all, ta_merged_updates, \
+    y_test, y_pred, collaborative_ts = hcn_utils.test_model(model_info,
                                       os.path.join(models_dir,f"{'_'.join(model_info.feature_set)}.hdf5"),
                                       subsets_file_lists['test'],
                                       available_actions,
-                                      task_dir,
+                                      args.test_dir,
                                       dialogue_settings,
                                       lm_dacts=dact_lm)
 
+    metrics['turn_accuracy'].append(ta)
+    metrics['turn_accuracy_ent'].append(ta_ent)
+    metrics['turn_accuracy_mu'].append(ta_merged_updates)
+    metrics['mission_success'].append(m_s)
+    metrics['end_state_success'].append(end_s)
+    metrics['correct_output'].append(correct_output)
+    if not np.isnan(collaborative_ts):
+        metrics['collaborative_ts'].append(collaborative_ts)
+    metrics['avg_length_mission'].append(turns_m)
+    metrics['situated_da_success'].append(situated_succ)
+    metrics['da_perplexity'].append(perplex)
+    metrics['diff_da_perplexity'].append(d_perplex)
+    metrics['avg_length_mission_succ'] += turns_m_all
+    outputs['y_true_all'] += y_test
+    outputs['y_pred_all'] += y_pred
 
 # Plot normalized confusion matrix
-cm, classes = hcn_utils.plot_confusion_matrix(y_test, y_pred, classes=available_actions, normalize=True,
-                      title='Normalised DAct confusion',only_existing_classes=True)
+cm, classes = hcn_utils.plot_confusion_matrix(outputs['y_true_all'], outputs['y_pred_all'],
+                        classes=available_actions, normalize=True,
+                        title='Normalised DAct confusion',only_existing_classes=True)
 
 with open(os.path.join(models_dir, 'actions.txt'),'w') as fp:
     fp.write('\n'.join(classes))
@@ -157,20 +222,19 @@ plt.savefig(os.path.join(models_dir, f'normalised_confusion_matrix_{".".join(arg
 plt.savefig(os.path.join(models_dir, f'normalised_confusion_matrix_{".".join(args.features)}.png'))
 
 utils.print_dict(model_info.__dict__)
-# input()
 
-print('Results of the train test: ')
-print(f'Acc (without entity replacement): {ta:.4f}')
-print(f'Acc (entity replacement): {ta_ent:.4f}')
-print(f'Acc (situated dialogue acts): {situated_succ:.4f}')
-print(f'Acc (merged update acts): {ta_merged_updates:.4f}')
-print(f'Mission Success: {m_s:.4f}')
-print(f'End state Success: {end_s:.4f}')
-print(f'Correct output: {correct_output:.4f}')
-print(f'TRL: {turns_m:.4f}')
-if len(turns_m_all):
-    print(f'TRL Succ: {sum(turns_m_all)/len(turns_m_all):.4f}')
+logger.info('Results of the train test: ')
+logger.info(f"Turn accuracy: {np.average(metrics['turn_accuracy']):.4f} ({np.std(metrics['turn_accuracy']):.3f})")
+logger.info(f"Turn accuracy entity: {np.average(metrics['turn_accuracy_ent']):.4f} ({np.std(metrics['turn_accuracy_ent']):.3f})")
+logger.info(f"Turn accuracy sit: {np.average(metrics['situated_da_success']):.4f} ({np.std(metrics['situated_da_success']):.3f})")
+logger.info(f"Turn accuracy mu: {np.average(metrics['turn_accuracy_mu']):.4f} ({np.std(metrics['turn_accuracy_mu']):.3f})")
+logger.info(f"TS: {np.average(metrics['mission_success']):.4f} ({np.std(metrics['mission_success']):.3f})")
+logger.info(f"TS END: {np.average(metrics['end_state_success']):.4f} ({np.std(metrics['end_state_success']):.3f})")
+logger.info(f"Correct output: {np.average(metrics['correct_output']):.4f} ({np.std(metrics['correct_output']):.3f})")
+logger.info(f"Colaborative Task Success: {np.average(metrics['collaborative_ts']):.4f} ({np.std(metrics['collaborative_ts']):.3f})")
+if len(metrics['avg_length_mission']) > 0:
+    logger.info(f"TRL Succ: {np.average(metrics['avg_length_mission']):.4f} ({np.std(metrics['avg_length_mission']):.3f})")
 else:
-    print('TRL Succ: NA (no successful dialogue)')
-print(f'Average DA perplexity: {perplex:.4f}')
-print(f'Average diff DA perplexity: {d_perplex:.4f}')
+    logger.info(f"TRL Succ: {sum(metrics['avg_length_mission_succ'])/len(metrics['avg_length_mission_succ']):.4f} (??)")
+logger.info(f"DA perplexity: {np.average(metrics['da_perplexity']):.4f} ({np.std(metrics['da_perplexity']):.3f})")
+logger.info(f"Diff DA perplexity: {np.average(metrics['diff_da_perplexity']):.4f} ({np.std(metrics['diff_da_perplexity']):.3f})")

@@ -1,0 +1,16 @@
+setuptools
+tensorflow-gpu==1.14.0
+farmi==3.1.0
+matplotlib
+numpy
+pyyaml
+deepdiff
+requests
+pandas
+arpa
+scipy
+sklearn
+tensorflow_hub==0.8.0
+tensorflow_text==0.1.0
+gensim
+progress

@@ -13,6 +13,7 @@ from orca_utils import rig_utils, hcn_utils, nlg_utils, dialogue_utils, dialogue
 
 DEBUG = False
 
+
 def shuffle_train_dev(trainset, devset):
     # randomise splits, keeping same dev amount of dialogues (8)
     logging.info(f'Shuffling train and dev sets')
@@ -30,6 +31,7 @@ def shuffle_train_dev(trainset, devset):
     random.shuffle(new_trainset)
 
     return new_trainset, new_devset
+
 
 parser = argparse.ArgumentParser(description='Trains LSTM for an Hybrid Code Network')
 parser.add_argument('--datadir','-d',type=str,help='Folder where the data is stored',required=True)

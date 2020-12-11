@@ -1,0 +1,1043 @@
+
+\data\
+ngram 1=48
+ngram 2=523
+ngram 3=459
+
+\1-grams:
+-1.458937	</s>
+-99	<s>	-1.722385
+-99	<unk>
+-3.559308	BC	-0.8833818
+-1.568082	UNK	-0.135775
+-1.835032	ack_misunderstood	-0.6254129
+-1.89655	actionperformed	-0.3054388
+-1.614825	db_query	-1.592344
+-1.400946	holdon2seconds	-0.6505784
+-3.082187	idonthavethatinformationatthemoment	-0.8423924
+-2.237089	info_not_available	-0.5738363
+-1.773978	inform_activate_emergency_shutdown	-1.760545
+-1.455504	inform_alert_emergency	-1.428147
+-1.306455	inform_arrival	-1.509977
+-2.027829	inform_damage_inspection	-1.492081
+-2.860338	inform_deactivate_emergency_shutdown	-0.775387
+-1.92584	inform_emergency_action	-1.666887
+-1.89655	inform_emergency_solved	-2.226121
+-1.58618	inform_emergency_status	-1.732814
+-1.572536	inform_inspection	-1.594804
+-2.19758	inform_mission_completed	-2.23734
+-1.164856	inform_moving	-1.007954
+-2.605066	inform_returning_to_base	-1.520406
+-2.19758	inform_risk	-2.237339
+-1.79588	inform_risk_spreading	-0.3117764
+-1.62481	inform_robot_available	-2.112756
+-1.525884	inform_robot_battery	-0.7120312
+-3.559308	inform_robot_crash	-0.880192
+-1.09841	inform_robot_eta	-2.573755
+-1.860338	inform_robot_not_available	-0.8432268
+-1.701975	inform_robot_progress	-1.021033
+-1.3392	inform_robot_status	-1.093229
+-1.59552	inform_robot_velocity	-1.199465
+-2.09691	inform_robot_wait	-0.8452699
+-1.788456	inform_symptom	-0.9310035
+-1.251812	inform_time_left	-0.5272437
+-1.619789	inform_wind	-0.5764775
+-1.455504	intro_hello	-2.319291
+-2.258278	mission_timeout	-1.510312
+-2.040794	no	-0.3995613
+-1.34712	okay	-1.141474
+-1.701975	request_attention	-1.400029
+-1.766916	request_pa_announcement	-0.8147529
+-1.614825	request_robot_emergency	-1.179794
+-1.906096	request_robot_inspect_damage	-1.140339
+-1.568082	request_robot_type	-1.272054
+-2.781157	sorrycanyourepeatthat	-0.798318
+-1.936059	yes	-0.1511484
+
+\2-grams:
+-2.090195	<s> UNK	-0.4497618
+-0.02848854	<s> intro_hello	0.1813931
+-2.159956	<s> okay
+-1.498311	<s> yes	-0.143895
+-0.05958569	BC inform_robot_progress
+-0.6110148	UNK </s>
+-1.835397	UNK UNK
+-1.981051	UNK ack_misunderstood	-0.1598791
+-2.050812	UNK db_query
+-1.389166	UNK holdon2seconds
+-2.050812	UNK inform_alert_emergency
+-0.9912261	UNK inform_arrival	0.7327766
+-2.050812	UNK inform_emergency_solved
+-1.835397	UNK inform_emergency_status
+-2.050812	UNK inform_mission_completed
+-1.835397	UNK inform_moving	-0.2146604
+-1.835397	UNK inform_risk
+-2.050812	UNK inform_robot_available
+-1.835397	UNK inform_robot_battery
+-1.146128	UNK inform_robot_eta	0.01953253
+-2.050812	UNK inform_robot_not_available
+-2.050812	UNK inform_robot_progress
+-1.981051	UNK inform_robot_status
+-1.981051	UNK inform_robot_velocity	-0.07715322
+-1.146128	UNK inform_time_left	-0.04819164
+-1.835397	UNK inform_wind
+-1.292256	UNK intro_hello	-0.03227282
+-1.835397	UNK mission_timeout	0.6030755
+-1.981051	UNK no	-0.1008232
+-1.835397	UNK okay
+-2.050812	UNK request_pa_announcement
+-2.050812	UNK request_robot_emergency
+-1.389166	UNK yes
+-0.8791778	ack_misunderstood UNK
+-1.783862	ack_misunderstood db_query
+-0.9461246	ack_misunderstood holdon2seconds	-0.08450614
+-1.714101	ack_misunderstood info_not_available
+-1.783862	ack_misunderstood inform_activate_emergency_shutdown
+-1.783862	ack_misunderstood inform_arrival
+-1.568447	ack_misunderstood inform_emergency_status	0.2751734
+-1.783862	ack_misunderstood inform_moving
+-1.025306	ack_misunderstood inform_robot_battery	-0.03979119
+-1.568447	ack_misunderstood inform_robot_eta
+-1.783862	ack_misunderstood inform_robot_velocity
+-1.122216	ack_misunderstood inform_time_left
+-1.568447	ack_misunderstood inform_wind
+-1.122216	ack_misunderstood no
+-0.7700334	ack_misunderstood okay	0.03153744
+-1.568447	ack_misunderstood request_robot_emergency	-0.3609268
+-1.783862	ack_misunderstood request_robot_inspect_damage
+-1.783862	ack_misunderstood request_robot_type
+-1.652583	actionperformed </s>
+-1.506929	actionperformed UNK
+-1.722344	actionperformed actionperformed
+-1.722344	actionperformed idonthavethatinformationatthemoment
+-0.9637879	actionperformed inform_activate_emergency_shutdown	0.1070694
+-1.722344	actionperformed inform_alert_emergency
+-1.722344	actionperformed inform_arrival
+-1.506929	actionperformed inform_emergency_status
+-1.652583	actionperformed inform_moving
+-1.722344	actionperformed inform_robot_available
+-1.722344	actionperformed inform_robot_battery
+-1.722344	actionperformed inform_robot_eta
+-1.722344	actionperformed inform_robot_not_available
+-1.506929	actionperformed inform_robot_progress
+-0.8846066	actionperformed inform_symptom	-0.01831579
+-1.652583	actionperformed inform_time_left
+-1.722344	actionperformed no
+-1.722344	actionperformed okay
+-0.7085153	actionperformed request_robot_type	-0.621158
+-1.722344	actionperformed yes
+-1.788654	db_query </s>
+-1.788654	db_query UNK
+-0.08115982	db_query inform_robot_available	0.5240717
+-1.788654	db_query inform_robot_battery
+-1.041393	db_query inform_robot_not_available	-0.2590816
+-2.004068	db_query inform_time_left
+-2.217948	holdon2seconds </s>
+-0.9822713	holdon2seconds UNK	-0.2911479
+-2.148187	holdon2seconds ack_misunderstood
+-2.217948	holdon2seconds actionperformed
+-2.148187	holdon2seconds holdon2seconds
+-2.002533	holdon2seconds info_not_available
+-0.7433891	holdon2seconds inform_arrival	-0.2413014
+-2.217948	holdon2seconds inform_emergency_solved
+-0.9542425	holdon2seconds inform_emergency_status	-0.5583511
+-2.217948	holdon2seconds inform_inspection
+-1.313264	holdon2seconds inform_risk	-0.001108289
+-2.217948	holdon2seconds inform_robot_crash
+-2.002533	holdon2seconds inform_robot_eta
+-2.148187	holdon2seconds inform_robot_status	-0.1971887
+-2.148187	holdon2seconds inform_robot_velocity	-0.07715322
+-0.7604225	holdon2seconds inform_robot_wait	-0.01642376
+-1.158363	holdon2seconds inform_time_left	-0.03348618
+-2.217948	holdon2seconds inform_wind
+-2.002533	holdon2seconds intro_hello	-0.1126647
+-1.079181	holdon2seconds mission_timeout	-0.1139433
+-2.002533	holdon2seconds no	-0.2763506
+-2.217948	holdon2seconds okay
+-2.217948	holdon2seconds request_attention
+-1.556303	holdon2seconds request_robot_type
+-2.217948	holdon2seconds yes
+-0.5367069	idonthavethatinformationatthemoment inform_activate_emergency_shutdown
+-0.5367069	idonthavethatinformationatthemoment inform_robot_eta
+-0.5367069	idonthavethatinformationatthemoment yes
+-0.6232493	info_not_available holdon2seconds	-0.03249194
+-0.7201593	info_not_available inform_arrival	0.0146181
+-1.16639	info_not_available inform_emergency_status	0.2751734
+-1.381805	info_not_available inform_risk
+-1.381805	info_not_available inform_risk_spreading
+-1.312044	info_not_available inform_robot_eta
+-1.381805	info_not_available inform_robot_progress
+-1.16639	info_not_available inform_robot_velocity
+-1.381805	info_not_available inform_time_left
+-1.381805	info_not_available yes
+-1.629501	inform_activate_emergency_shutdown ack_misunderstood
+-1.18327	inform_activate_emergency_shutdown inform_moving	0.0276525
+-1.844916	inform_activate_emergency_shutdown inform_robot_not_available
+-1.18327	inform_activate_emergency_shutdown inform_time_left	-0.3916396
+-1.844916	inform_activate_emergency_shutdown inform_wind
+-0.7439371	inform_activate_emergency_shutdown request_pa_announcement	0.2124756
+-0.2055462	inform_activate_emergency_shutdown request_robot_type	-0.0215922
+-2.163389	inform_alert_emergency UNK
+-2.163389	inform_alert_emergency ack_misunderstood
+-0.7058637	inform_alert_emergency inform_activate_emergency_shutdown	0.448441
+-0.9576757	inform_alert_emergency inform_moving	0.1972248
+-2.093629	inform_alert_emergency inform_robot_not_available	-0.1134917
+-0.4505912	inform_alert_emergency inform_symptom	-0.09695631
+-2.163389	inform_alert_emergency inform_time_left
+-1.947975	inform_alert_emergency inform_wind	-0.3897185
+-2.163389	inform_alert_emergency intro_hello
+-0.6888304	inform_alert_emergency request_pa_announcement	-0.1324489
+-1.258706	inform_alert_emergency request_robot_type	-0.1053708
+-2.163389	inform_alert_emergency yes
+-2.312439	inform_arrival holdon2seconds
+-2.312439	inform_arrival inform_arrival
+-0.7343391	inform_arrival inform_damage_inspection	0.04049188
+-0.6296037	inform_arrival inform_emergency_action	0.04800892
+-2.242678	inform_arrival inform_emergency_solved	0.8892229
+-0.2890652	inform_arrival inform_inspection	0.248687
+-2.312439	inform_arrival inform_risk_spreading
+-2.312439	inform_arrival inform_robot_battery
+-2.097024	inform_arrival inform_robot_status	-0.3931628
+-2.097024	inform_arrival inform_time_left
+-2.312439	inform_arrival inform_wind
+-0.7533277	inform_damage_inspection UNK	-0.4401406
+-0.4175356	inform_damage_inspection holdon2seconds	-0.2540599
+-1.591065	inform_damage_inspection info_not_available
+-1.591065	inform_damage_inspection inform_damage_inspection
+-0.5314789	inform_damage_inspection inform_risk	0.8138393
+-1.37565	inform_damage_inspection inform_robot_battery	-0.3911291
+-1.591065	inform_damage_inspection yes
+-0.07918125	inform_deactivate_emergency_shutdown inform_mission_completed	1.045195
+-1.693054	inform_emergency_action </s>
+-0.04240385	inform_emergency_action inform_emergency_solved	0.07169318
+-1.47764	inform_emergency_action inform_risk_spreading
+-1.693054	inform_emergency_action inform_robot_status
+-1.722344	inform_emergency_solved </s>
+-1.722344	inform_emergency_solved ack_misunderstood
+-0.01930515	inform_emergency_solved request_robot_inspect_damage	-0.06677485
+-1.817299	inform_emergency_status </s>
+-2.032714	inform_emergency_status UNK
+-1.817299	inform_emergency_status ack_misunderstood	-0.3850321
+-1.274158	inform_emergency_status inform_moving	0.01425457
+-2.032714	inform_emergency_status inform_risk_spreading
+-1.018885	inform_emergency_status inform_robot_not_available	-0.1713133
+-0.1038961	inform_emergency_status request_robot_emergency	-0.3012572
+-1.384712	inform_inspection </s>
+-1.830943	inform_inspection UNK	-0.3905334
+-1.830943	inform_inspection ack_misunderstood
+-2.046357	inform_inspection actionperformed
+-0.9075905	inform_inspection holdon2seconds	-0.9880844
+-0.6645525	inform_inspection inform_emergency_status	0.3232271
+-2.046357	inform_inspection inform_robot_battery
+-1.287802	inform_inspection inform_robot_status	-0.1056902
+-0.3635224	inform_inspection inform_time_left	-0.7779055
+-1.287802	inform_inspection inform_wind	-0.167276
+-2.046357	inform_inspection no
+-2.046357	inform_inspection yes
+-0.01930515	inform_mission_completed </s>
+-1.421314	inform_mission_completed inform_returning_to_base
+-2.384276	inform_moving </s>
+-2.454037	inform_moving UNK
+-2.238623	inform_moving ack_misunderstood
+-2.454037	inform_moving actionperformed
+-0.9472936	inform_moving holdon2seconds	-0.8787736
+-2.384276	inform_moving inform_arrival	-0.1591711
+-2.238623	inform_moving inform_moving
+-1.549354	inform_moving inform_risk_spreading	-0.07067555
+-1.491362	inform_moving inform_robot_battery	-0.5180263
+-0.4650328	inform_moving inform_robot_eta	0.8033139
+-2.454037	inform_moving inform_robot_not_available
+-2.384276	inform_moving inform_robot_progress	-0.1702446
+-0.5136381	inform_moving inform_robot_status	-0.3339908
+-1.440209	inform_moving inform_robot_velocity	-0.06377225
+-2.454037	inform_moving inform_robot_wait
+-1.695482	inform_moving inform_time_left
+-1.695482	inform_moving inform_wind	-0.1500322
+-2.238623	inform_moving no
+-2.454037	inform_moving okay
+-2.454037	inform_moving request_robot_emergency
+-1.792392	inform_moving yes
+-1.013828	inform_returning_to_base </s>
+-1.013828	inform_returning_to_base ack_misunderstood
+-0.1091445	inform_returning_to_base inform_mission_completed	0.9517735
+-1.421314	inform_risk UNK
+-0.6627578	inform_risk inform_deactivate_emergency_shutdown	0.4616187
+-0.4074853	inform_risk inform_mission_completed	0.3617278
+-0.4586379	inform_risk inform_returning_to_base	0.3210858
+-1.753253	inform_risk_spreading </s>
+-1.607599	inform_risk_spreading UNK
+-1.753253	inform_risk_spreading ack_misunderstood	-0.1873173
+-1.161368	inform_risk_spreading holdon2seconds
+-1.823014	inform_risk_spreading info_not_available
+-1.753253	inform_risk_spreading inform_arrival	-0.3563724
+-1.823014	inform_risk_spreading inform_emergency_action
+-1.823014	inform_risk_spreading inform_emergency_solved
+-1.823014	inform_risk_spreading inform_robot_battery
+-0.9852768	inform_risk_spreading inform_robot_eta	0.004321769
+-1.607599	inform_risk_spreading inform_robot_not_available
+-1.753253	inform_risk_spreading inform_robot_progress
+-1.064458	inform_risk_spreading inform_robot_status	-0.09752143
+-1.161368	inform_risk_spreading inform_robot_velocity
+-1.607599	inform_risk_spreading inform_robot_wait
+-0.763428	inform_risk_spreading inform_time_left	-0.09006286
+-1.823014	inform_risk_spreading inform_wind
+-1.753253	inform_risk_spreading no	-0.1008232
+-1.823014	inform_risk_spreading request_robot_emergency
+-1.607599	inform_risk_spreading yes
+-0.03687136	inform_robot_available inform_moving	-0.1765366
+-1.235528	inform_robot_available inform_robot_battery	-0.1148362
+-1.778669	inform_robot_available okay	-0.2181606
+-2.093009	inform_robot_battery </s>
+-1.877595	inform_robot_battery UNK
+-2.093009	inform_robot_battery ack_misunderstood
+-2.093009	inform_robot_battery actionperformed
+-1.188326	inform_robot_battery holdon2seconds	-0.2782596
+-1.334454	inform_robot_battery info_not_available	-0.09726806
+-0.7781513	inform_robot_battery inform_arrival	0.6768787
+-2.093009	inform_robot_battery inform_emergency_status
+-2.023249	inform_robot_battery inform_moving	-0.03913304
+-1.877595	inform_robot_battery inform_risk	-0.2904692
+-1.877595	inform_robot_battery inform_robot_available	0.6924759
+-1.877595	inform_robot_battery inform_robot_battery
+-0.7546701	inform_robot_battery inform_robot_eta	0.06786543
+-1.334454	inform_robot_battery inform_robot_progress	-0.1553637
+-1.079181	inform_robot_battery inform_robot_status	0.0510397
+-1.079181	inform_robot_battery inform_robot_velocity	0.01803783
+-1.130334	inform_robot_battery inform_time_left	-0.1557071
+-1.188326	inform_robot_battery inform_wind	-0.2946826
+-2.093009	inform_robot_battery mission_timeout
+-2.093009	inform_robot_battery no
+-2.023249	inform_robot_battery okay
+-2.093009	inform_robot_battery yes
+-0.05958569	inform_robot_crash UNK
+-1.460898	inform_robot_eta </s>
+-1.460898	inform_robot_eta UNK	-0.1295917
+-1.682747	inform_robot_eta ack_misunderstood	-0.06266081
+-2.520483	inform_robot_eta actionperformed
+-1.118475	inform_robot_eta holdon2seconds	-0.05337736
+-2.520483	inform_robot_eta info_not_available
+-1.029534	inform_robot_eta inform_arrival	0.5363133
+-1.31477	inform_robot_eta inform_risk_spreading	-0.04021499
+-0.9695361	inform_robot_eta inform_robot_battery	-0.1306745
+-1.09917	inform_robot_eta inform_robot_eta	-0.1256976
+-1.118475	inform_robot_eta inform_robot_progress	0.200155
+-1.31477	inform_robot_eta inform_robot_status	0.09344947
+-1.118475	inform_robot_eta inform_robot_velocity	0.1976402
+-0.6827466	inform_robot_eta inform_time_left	-0.1974306
+-1.138679	inform_robot_eta inform_wind	-0.2728026
+-1.858838	inform_robot_eta no
+-2.520483	inform_robot_eta yes
+-1.688795	inform_robot_not_available </s>
+-1.758556	inform_robot_not_available UNK
+-1.758556	inform_robot_not_available actionperformed
+-1.09691	inform_robot_not_available db_query	0.6137798
+-0.6575773	inform_robot_not_available inform_moving	0.1675387
+-1.543141	inform_robot_not_available inform_risk_spreading	-0.3860702
+-1	inform_robot_not_available inform_robot_available	0.7728678
+-1.758556	inform_robot_not_available inform_robot_eta
+-0.79588	inform_robot_not_available inform_robot_not_available	-0.01626053
+-1.543141	inform_robot_not_available inform_time_left
+-1.758556	inform_robot_not_available inform_wind
+-1.09691	inform_robot_not_available okay	-0.1518754
+-0.9208187	inform_robot_not_available request_robot_emergency	-0.06914006
+-1.758556	inform_robot_not_available request_robot_type
+-1.916918	inform_robot_progress </s>
+-1.916918	inform_robot_progress ack_misunderstood
+-1.916918	inform_robot_progress actionperformed
+-1.255273	inform_robot_progress holdon2seconds	-0.06813108
+-0.5785789	inform_robot_progress inform_arrival	0.4019917
+-1.916918	inform_robot_progress inform_risk_spreading
+-1.847157	inform_robot_progress inform_robot_battery	-0.1422159
+-0.7112045	inform_robot_progress inform_robot_eta	-0.07724473
+-0.9542425	inform_robot_progress inform_robot_progress	-0.01919639
+-1.701504	inform_robot_progress inform_robot_status
+-0.8573325	inform_robot_progress inform_robot_velocity	0.04791361
+-1.158363	inform_robot_progress inform_time_left	-0.07864812
+-1.916918	inform_robot_progress inform_wind
+-1.916918	inform_robot_progress mission_timeout
+-1.916918	inform_robot_progress okay
+-1.317018	inform_robot_status </s>
+-1.317018	inform_robot_status UNK	-0.1537026
+-2.209933	inform_robot_status ack_misunderstood
+-2.279694	inform_robot_status actionperformed
+-2.209933	inform_robot_status holdon2seconds
+-2.279694	inform_robot_status info_not_available
+-1.265866	inform_robot_status inform_arrival	0.148443
+-2.279694	inform_robot_status inform_emergency_solved
+-1.521138	inform_robot_status inform_emergency_status	0.4910573
+-2.064279	inform_robot_status inform_inspection
+-2.279694	inform_robot_status inform_risk_spreading
+-1.140927	inform_robot_status inform_robot_battery	-0.1281348
+-0.3392945	inform_robot_status inform_robot_eta	0.1884264
+-1.317018	inform_robot_status inform_robot_progress	0.008890696
+-1.618048	inform_robot_status inform_robot_status
+-1.618048	inform_robot_status inform_robot_velocity
+-1.317018	inform_robot_status inform_time_left	-0.02064402
+-1.521138	inform_robot_status inform_wind	-0.1558465
+-2.279694	inform_robot_status mission_timeout
+-1.618048	inform_robot_status no	-0.08325567
+-2.064279	inform_robot_status yes
+-1.807959	inform_robot_velocity </s>
+-1.361728	inform_robot_velocity UNK	-0.1078682
+-1.264818	inform_robot_velocity holdon2seconds	-0.3546318
+-2.023374	inform_robot_velocity info_not_available
+-0.5488145	inform_robot_velocity inform_arrival	0.2373638
+-1.953613	inform_robot_velocity inform_risk_spreading
+-0.8846066	inform_robot_velocity inform_robot_battery	-0.04381391
+-1.009545	inform_robot_velocity inform_robot_eta	-0.02531712
+-1.009545	inform_robot_velocity inform_robot_progress	0.03572932
+-1.361728	inform_robot_velocity inform_robot_status	0.111254
+-2.023374	inform_robot_velocity inform_robot_velocity
+-1.185637	inform_robot_velocity inform_time_left	-0.1346083
+-1.060698	inform_robot_velocity inform_wind	-0.1621718
+-2.023374	inform_robot_velocity no
+-2.023374	inform_robot_velocity yes
+-1.521984	inform_robot_wait UNK
+-1.521984	inform_robot_wait holdon2seconds
+-1.306569	inform_robot_wait inform_risk_spreading	-0.3577724
+-1.521984	inform_robot_wait inform_robot_battery
+-1.306569	inform_robot_wait inform_robot_eta
+-0.2319491	inform_robot_wait inform_robot_status	-0.1864321
+-1.521984	inform_robot_wait inform_time_left
+-1.306569	inform_robot_wait inform_wind
+-1.306569	inform_robot_wait no	-0.3832387
+-1.830438	inform_symptom ack_misunderstood
+-1.615023	inform_symptom actionperformed
+-0.3906408	inform_symptom inform_activate_emergency_shutdown	-0.6555792
+-1.760677	inform_symptom inform_robot_not_available
+-1.760677	inform_symptom inform_time_left
+-1.615023	inform_symptom inform_wind
+-1.830438	inform_symptom okay
+-0.5155795	inform_symptom request_pa_announcement	-0.560657
+-1.071882	inform_symptom request_robot_type	-0.1578155
+-1.529345	inform_time_left </s>
+-2.367082	inform_time_left BC
+-1.529345	inform_time_left UNK	-0.06455591
+-1.705436	inform_time_left ack_misunderstood
+-1.529345	inform_time_left actionperformed
+-1.307496	inform_time_left holdon2seconds	-0.1569299
+-2.367082	inform_time_left idonthavethatinformationatthemoment
+-2.151667	inform_time_left info_not_available
+-2.297321	inform_time_left inform_alert_emergency
+-1.131405	inform_time_left inform_arrival	-0.6044796
+-0.7277125	inform_time_left inform_emergency_status	-0.1383923
+-2.367082	inform_time_left inform_inspection
+-2.297321	inform_time_left inform_moving	-0.2053433
+-0.9650733	inform_time_left inform_risk_spreading	-0.04454467
+-1.404406	inform_time_left inform_robot_battery	-0.09431568
+-1.052224	inform_time_left inform_robot_eta	-0.1137644
+-2.151667	inform_time_left inform_robot_not_available
+-1.529345	inform_time_left inform_robot_progress	-0.04187594
+-1.307496	inform_time_left inform_robot_status	0.1396045
+-1.307496	inform_time_left inform_robot_velocity	0.02289757
+-2.367082	inform_time_left inform_robot_wait
+-2.297321	inform_time_left inform_time_left
+-1.193553	inform_time_left inform_wind	-0.07023352
+-2.151667	inform_time_left no
+-2.151667	inform_time_left okay	-0.383394
+-2.151667	inform_time_left request_pa_announcement	-0.3896938
+-2.297321	inform_time_left request_robot_type
+-2.151667	inform_time_left sorrycanyourepeatthat
+-2.297321	inform_time_left yes
+-1.999105	inform_wind </s>
+-1.999105	inform_wind UNK
+-1.78369	inform_wind ack_misunderstood	-0.3538899
+-1.999105	inform_wind actionperformed
+-1.999105	inform_wind db_query
+-1.094421	inform_wind holdon2seconds	-0.05872034
+-1.78369	inform_wind info_not_available
+-1.999105	inform_wind inform_activate_emergency_shutdown
+-1.337459	inform_wind inform_alert_emergency	-0.05940802
+-0.8981265	inform_wind inform_arrival	-0.4270289
+-1.78369	inform_wind inform_emergency_status
+-1.999105	inform_wind inform_inspection
+-1.999105	inform_wind inform_risk_spreading
+-1.094421	inform_wind inform_robot_battery	-0.002348594
+-0.860338	inform_wind inform_robot_eta	0.00650458
+-1.78369	inform_wind inform_robot_progress
+-1.929344	inform_wind inform_robot_status	-0.1999461
+-0.9395192	inform_wind inform_robot_velocity	0.02477977
+-1.78369	inform_wind inform_symptom
+-0.9395192	inform_wind inform_time_left	-0.1417901
+-1.999105	inform_wind mission_timeout
+-1.999105	inform_wind no
+-1.999105	inform_wind okay
+-1.999105	inform_wind request_pa_announcement
+-1.78369	inform_wind request_robot_type
+-0.2976238	intro_hello inform_alert_emergency	-0.2542958
+-0.3184739	intro_hello request_attention	-0.005169511
+-1.947975	intro_hello yes	-0.3862079
+-0.04575749	mission_timeout </s>
+-1.145201	mission_timeout okay	-0.3370252
+-0.615424	no UNK	-0.1027864
+-1.508339	no ack_misunderstood
+-1.5781	no holdon2seconds
+-1.5781	no idonthavethatinformationatthemoment
+-1.362685	no inform_emergency_status
+-1.362685	no inform_robot_battery	-0.3128907
+-0.819544	no inform_robot_eta	-0.1036788
+-1.5781	no inform_robot_progress
+-1.508339	no inform_robot_status
+-1.508339	no inform_robot_velocity	-0.1921077
+-1.362685	no mission_timeout	0.6030755
+-1.5781	no okay
+-1.5781	no yes
+-2.271773	okay </s>
+-1.610128	okay UNK	-0.1767213
+-2.271773	okay ack_misunderstood
+-0.8899683	okay actionperformed	-0.3487059
+-0.5787191	okay db_query	-0.8650771
+-2.271773	okay inform_activate_emergency_shutdown
+-2.271773	okay inform_alert_emergency
+-2.271773	okay inform_arrival
+-0.4718249	okay inform_moving	-0.538894
+-2.202012	okay inform_robot_available	0.6168955
+-2.056359	okay inform_robot_not_available
+-1.513218	okay inform_robot_status	-0.09476399
+-2.271773	okay inform_robot_velocity
+-2.056359	okay inform_symptom	-0.1701405
+-2.056359	okay inform_time_left	-0.3838947
+-2.271773	okay inform_wind
+-2.271773	okay intro_hello
+-1.008068	okay request_robot_type	-0.5723075
+-2.056359	okay sorrycanyourepeatthat
+-1.916918	request_attention UNK
+-1.916918	request_attention actionperformed
+-1.916918	request_attention holdon2seconds
+-0.1497623	request_attention inform_alert_emergency	0.3205478
+-1.701504	request_attention inform_time_left
+-1.158363	request_attention inform_wind	-0.167276
+-1.701504	request_attention okay
+-1.012234	request_attention request_attention	0.2710253
+-1.701504	request_attention yes
+-1.851977	request_pa_announcement </s>
+-1.636563	request_pa_announcement ack_misunderstood
+-1.636563	request_pa_announcement actionperformed
+-1.851977	request_pa_announcement holdon2seconds
+-1.636563	request_pa_announcement inform_activate_emergency_shutdown
+-1.636563	request_pa_announcement inform_moving
+-1.782217	request_pa_announcement inform_symptom
+-0.2126081	request_pa_announcement okay	-0.7609061
+-1.782217	request_pa_announcement request_pa_announcement
+-0.9472936	request_pa_announcement request_robot_type	-0.04171254
+-1.851977	request_pa_announcement yes
+-1.342423	request_robot_emergency </s>
+-1.934307	request_robot_emergency ack_misunderstood
+-0.7403627	request_robot_emergency db_query	0.5399329
+-2.004068	request_robot_emergency holdon2seconds
+-0.5465426	request_robot_emergency inform_moving	-0.02504423
+-1.099385	request_robot_emergency inform_robot_not_available	-0.1089795
+-0.4973246	request_robot_emergency okay	-1.063124
+-1.934307	request_robot_emergency request_robot_emergency
+-2.004068	request_robot_emergency yes
+-1.712798	request_robot_inspect_damage </s>
+-1.712798	request_robot_inspect_damage UNK
+-1.643037	request_robot_inspect_damage ack_misunderstood
+-1.712798	request_robot_inspect_damage actionperformed
+-0.69897	request_robot_inspect_damage db_query	0.8090897
+-0.7501225	request_robot_inspect_damage inform_moving	-0.03861342
+-1.712798	request_robot_inspect_damage no
+-0.3309932	request_robot_inspect_damage okay	-0.6396374
+-2.050812	request_robot_type UNK
+-1.981051	request_robot_type ack_misunderstood	-0.3916817
+-1.835397	request_robot_type actionperformed
+-0.8772827	request_robot_type db_query	-0.3777367
+-2.050812	request_robot_type info_not_available
+-0.5141048	request_robot_type inform_moving	-0.08051997
+-1.835397	request_robot_type inform_robot_not_available	-0.3212038
+-2.050812	request_robot_type inform_wind
+-2.050812	request_robot_type no
+-0.4001615	request_robot_type okay	-1.19179
+-1.389166	request_robot_type request_robot_type	-0.5344576
+-2.050812	request_robot_type yes
+-0.837737	sorrycanyourepeatthat </s>
+-0.837737	sorrycanyourepeatthat UNK
+-0.837737	sorrycanyourepeatthat holdon2seconds
+-0.837737	sorrycanyourepeatthat inform_alert_emergency
+-0.837737	sorrycanyourepeatthat inform_time_left
+-0.837737	sorrycanyourepeatthat sorrycanyourepeatthat
+-1.682835	yes </s>
+-1.613074	yes UNK
+-1.682835	yes actionperformed
+-1.021189	yes holdon2seconds
+-1.682835	yes info_not_available
+-1.682835	yes inform_activate_emergency_shutdown
+-1.682835	yes inform_alert_emergency
+-1.021189	yes inform_arrival
+-1.682835	yes inform_emergency_status
+-1.682835	yes inform_mission_completed
+-1.682835	yes inform_moving
+-1.682835	yes inform_risk
+-1.682835	yes inform_robot_available
+-1.46742	yes inform_robot_battery
+-1.613074	yes inform_robot_eta
+-1.682835	yes inform_symptom
+-1.46742	yes inform_time_left
+-1.613074	yes okay
+-1.613074	yes request_attention
+-1.682835	yes request_robot_type
+-1.682835	yes sorrycanyourepeatthat
+-0.9242793	yes yes	-0.1786361
+
+\3-grams:
+-0.178418	<s> UNK intro_hello
+-0.2730013	holdon2seconds UNK </s>
+-0.8773879	holdon2seconds UNK inform_arrival
+-0.2744623	inform_damage_inspection UNK </s>
+-0.6996483	inform_damage_inspection UNK inform_risk
+-0.2225271	inform_inspection UNK inform_emergency_status
+-0.9214971	inform_robot_eta UNK inform_robot_velocity
+-0.7012967	inform_robot_eta UNK inform_time_left
+-0.824587	inform_robot_status UNK </s>
+-0.824587	inform_robot_status UNK inform_arrival
+-0.824587	inform_robot_status UNK inform_robot_eta
+-0.824587	inform_robot_status UNK no
+-0.5235571	inform_robot_velocity UNK inform_arrival
+-0.6996483	inform_time_left UNK inform_robot_eta
+-0.824587	no UNK ack_misunderstood
+-0.824587	no UNK inform_arrival
+-0.3033567	okay UNK </s>
+-0.3986183	UNK ack_misunderstood UNK
+-0.2225271	inform_emergency_status ack_misunderstood request_robot_emergency
+-0.3986183	inform_risk_spreading ack_misunderstood no
+-0.6996483	inform_robot_eta ack_misunderstood inform_time_left
+-0.2225271	inform_wind ack_misunderstood inform_robot_battery
+-0.178418	request_robot_type ack_misunderstood okay
+-1.243716	okay actionperformed UNK
+-0.8185303	okay actionperformed inform_activate_emergency_shutdown
+-0.909311	okay actionperformed inform_symptom
+-0.3679768	okay actionperformed request_robot_type
+-0.5235571	inform_robot_not_available db_query inform_robot_available
+-0.01021917	okay db_query inform_robot_available
+-0.2498775	request_robot_emergency db_query inform_robot_available
+-0.7912117	request_robot_emergency db_query inform_robot_not_available
+-0.4505535	request_robot_inspect_damage db_query inform_robot_available
+-0.8757396	request_robot_inspect_damage db_query inform_robot_not_available
+-0.03218468	request_robot_type db_query inform_robot_available
+-0.6996483	ack_misunderstood holdon2seconds request_robot_type
+-0.6204671	info_not_available holdon2seconds inform_arrival
+-0.7010351	inform_damage_inspection holdon2seconds UNK
+-0.4828653	inform_damage_inspection holdon2seconds inform_risk
+-0.1249387	inform_inspection holdon2seconds inform_emergency_status
+-0.7804779	inform_inspection holdon2seconds inform_time_left
+-0.06694679	inform_moving holdon2seconds inform_robot_wait
+-1.368655	inform_moving holdon2seconds inform_time_left
+-0.341409	inform_robot_battery holdon2seconds inform_arrival
+-0.7665951	inform_robot_battery holdon2seconds inform_emergency_status
+-1.26392	inform_robot_eta holdon2seconds UNK
+-1.26392	inform_robot_eta holdon2seconds info_not_available
+-0.7113446	inform_robot_eta holdon2seconds inform_arrival
+-1.043719	inform_robot_eta holdon2seconds inform_time_left
+-0.9295144	inform_robot_eta holdon2seconds mission_timeout
+-0.5235571	inform_robot_progress holdon2seconds inform_arrival
+-0.195281	inform_robot_velocity holdon2seconds inform_arrival
+-0.496311	inform_time_left holdon2seconds inform_emergency_status
+-0.9214971	inform_time_left holdon2seconds mission_timeout
+-0.5463948	inform_wind holdon2seconds inform_arrival
+-0.6204671	inform_robot_battery info_not_available inform_robot_eta
+-0.2860617	actionperformed inform_activate_emergency_shutdown request_robot_type
+-1.319437	inform_alert_emergency inform_activate_emergency_shutdown inform_moving
+-1.319437	inform_alert_emergency inform_activate_emergency_shutdown inform_time_left
+-0.39794	inform_alert_emergency inform_activate_emergency_shutdown request_pa_announcement
+-0.49485	inform_alert_emergency inform_activate_emergency_shutdown request_robot_type
+-0.03778856	inform_symptom inform_activate_emergency_shutdown request_robot_type
+-0.5235571	inform_wind inform_alert_emergency inform_activate_emergency_shutdown
+-1.175102	intro_hello inform_alert_emergency inform_activate_emergency_shutdown
+-0.287666	intro_hello inform_alert_emergency inform_symptom
+-0.5509075	intro_hello inform_alert_emergency request_pa_announcement
+-1.507477	intro_hello inform_alert_emergency request_robot_type
+-0.5614421	request_attention inform_alert_emergency inform_activate_emergency_shutdown
+-0.6283889	request_attention inform_alert_emergency inform_moving
+-1.629067	request_attention inform_alert_emergency inform_robot_not_available
+-0.7075702	request_attention inform_alert_emergency inform_symptom
+-1.629067	request_attention inform_alert_emergency inform_wind
+-1.076492	request_attention inform_alert_emergency request_pa_announcement
+-1.408867	request_attention inform_alert_emergency request_robot_type
+-0.7012967	UNK inform_arrival inform_damage_inspection
+-0.496311	UNK inform_arrival inform_emergency_action
+-0.9214971	UNK inform_arrival inform_inspection
+-0.6368221	holdon2seconds inform_arrival inform_damage_inspection
+-0.6368221	holdon2seconds inform_arrival inform_emergency_action
+-0.30103	holdon2seconds inform_arrival inform_inspection
+-0.3033567	info_not_available inform_arrival inform_inspection
+-0.178418	inform_moving inform_arrival inform_inspection
+-0.178418	inform_risk_spreading inform_arrival inform_emergency_action
+-0.4771213	inform_robot_battery inform_arrival inform_damage_inspection
+-0.6241944	inform_robot_battery inform_arrival inform_emergency_action
+-0.9565692	inform_robot_battery inform_arrival inform_inspection
+-1.018456	inform_robot_eta inform_arrival inform_damage_inspection
+-0.9276748	inform_robot_eta inform_arrival inform_emergency_action
+-0.2552725	inform_robot_eta inform_arrival inform_inspection
+-1.200251	inform_robot_progress inform_arrival inform_damage_inspection
+-0.8658453	inform_robot_progress inform_arrival inform_emergency_action
+-0.1995724	inform_robot_progress inform_arrival inform_inspection
+-0.6555392	inform_robot_status inform_arrival inform_damage_inspection
+-0.4505535	inform_robot_status inform_arrival inform_inspection
+-0.6368221	inform_robot_velocity inform_arrival inform_damage_inspection
+-1.11627	inform_robot_velocity inform_arrival inform_emergency_action
+-0.2388821	inform_robot_velocity inform_arrival inform_inspection
+-0.4259687	inform_time_left inform_arrival inform_emergency_action
+-0.2498775	inform_time_left inform_arrival inform_inspection
+-0.08715018	inform_wind inform_arrival inform_inspection
+-0.7403627	inform_arrival inform_damage_inspection UNK
+-0.4045706	inform_arrival inform_damage_inspection holdon2seconds
+-0.5642715	inform_arrival inform_damage_inspection inform_risk
+-1.440011	inform_arrival inform_damage_inspection inform_robot_battery
+-0.2860617	inform_risk inform_deactivate_emergency_shutdown inform_mission_completed
+-0.04346569	inform_arrival inform_emergency_action inform_emergency_solved
+-1.544746	inform_arrival inform_emergency_action inform_risk_spreading
+-0.178418	inform_arrival inform_emergency_solved request_robot_inspect_damage
+-0.02286288	inform_emergency_action inform_emergency_solved request_robot_inspect_damage
+-0.2225271	ack_misunderstood inform_emergency_status request_robot_emergency
+-0.02632894	holdon2seconds inform_emergency_status request_robot_emergency
+-0.2225271	info_not_available inform_emergency_status request_robot_emergency
+-1.023516	inform_inspection inform_emergency_status inform_moving
+-0.8185303	inform_inspection inform_emergency_status inform_robot_not_available
+-0.2082759	inform_inspection inform_emergency_status request_robot_emergency
+-0.6204671	inform_robot_status inform_emergency_status inform_robot_not_available
+-0.4002667	inform_robot_status inform_emergency_status request_robot_emergency
+-1.501281	inform_time_left inform_emergency_status ack_misunderstood
+-1.28108	inform_time_left inform_emergency_status inform_robot_not_available
+-0.07463362	inform_time_left inform_emergency_status request_robot_emergency
+-1.460099	inform_arrival inform_inspection </s>
+-1.885285	inform_arrival inform_inspection UNK
+-1.885285	inform_arrival inform_inspection ack_misunderstood
+-0.8846066	inform_arrival inform_inspection holdon2seconds
+-0.6850342	inform_arrival inform_inspection inform_emergency_status
+-1.460099	inform_arrival inform_inspection inform_robot_status
+-0.351004	inform_arrival inform_inspection inform_time_left
+-1.55088	inform_arrival inform_inspection inform_wind
+-0.2860617	inform_deactivate_emergency_shutdown inform_mission_completed </s>
+-0.21402	inform_returning_to_base inform_mission_completed </s>
+-0.04575749	inform_risk inform_mission_completed </s>
+-0.2225271	UNK inform_moving inform_robot_eta
+-0.5235571	inform_activate_emergency_shutdown inform_moving inform_robot_eta
+-0.51505	inform_alert_emergency inform_moving inform_robot_eta
+-0.8474247	inform_alert_emergency inform_moving inform_robot_status
+-0.4002667	inform_emergency_status inform_moving inform_robot_eta
+-0.6204671	inform_emergency_status inform_moving inform_robot_status
+-0.6935071	inform_robot_available inform_moving holdon2seconds
+-1.819124	inform_robot_available inform_moving inform_risk_spreading
+-1.393938	inform_robot_available inform_moving inform_robot_battery
+-0.5965971	inform_robot_available inform_moving inform_robot_eta
+-0.450469	inform_robot_available inform_moving inform_robot_status
+-1.598924	inform_robot_available inform_moving inform_time_left
+-1.819124	inform_robot_available inform_moving yes
+-0.3986183	inform_robot_battery inform_moving inform_robot_eta
+-0.5377037	inform_robot_not_available inform_moving inform_robot_eta
+-0.9628898	inform_robot_not_available inform_moving inform_robot_status
+-0.9628898	inform_robot_not_available inform_moving yes
+-0.3986183	inform_time_left inform_moving inform_robot_velocity
+-0.8372727	okay inform_moving holdon2seconds
+-1.441659	okay inform_moving inform_risk_spreading
+-1.236674	okay inform_moving inform_robot_battery
+-0.6611814	okay inform_moving inform_robot_eta
+-0.3089989	okay inform_moving inform_robot_status
+-1.319437	request_robot_emergency inform_moving inform_risk_spreading
+-0.2839966	request_robot_emergency inform_moving inform_robot_eta
+-0.894251	request_robot_emergency inform_moving inform_robot_status
+-0.399401	request_robot_inspect_damage inform_moving inform_robot_eta
+-0.3309932	request_robot_type inform_moving inform_robot_eta
+-0.8460432	request_robot_type inform_moving inform_robot_status
+-0.9734322	request_robot_type inform_moving inform_robot_velocity
+-1.398618	request_robot_type inform_moving inform_wind
+-0.2720119	inform_risk inform_returning_to_base inform_mission_completed
+-0.341409	holdon2seconds inform_risk inform_mission_completed
+-0.5463948	holdon2seconds inform_risk inform_returning_to_base
+-0.7012967	inform_damage_inspection inform_risk inform_deactivate_emergency_shutdown
+-0.496311	inform_damage_inspection inform_risk inform_mission_completed
+-0.7012967	inform_damage_inspection inform_risk inform_returning_to_base
+-0.2225271	inform_robot_battery inform_risk inform_deactivate_emergency_shutdown
+-0.7665951	inform_moving inform_risk_spreading inform_robot_wait
+-1.067625	inform_robot_eta inform_risk_spreading ack_misunderstood
+-1.067625	inform_robot_eta inform_risk_spreading inform_robot_eta
+-0.7332197	inform_robot_eta inform_risk_spreading inform_time_left
+-0.2225271	inform_robot_not_available inform_risk_spreading inform_robot_not_available
+-0.2225271	inform_robot_wait inform_risk_spreading inform_robot_status
+-1.043719	inform_time_left inform_risk_spreading holdon2seconds
+-1.26392	inform_time_left inform_risk_spreading inform_arrival
+-1.043719	inform_time_left inform_risk_spreading inform_robot_eta
+-1.26392	inform_time_left inform_risk_spreading inform_robot_velocity
+-1.043719	inform_time_left inform_risk_spreading inform_time_left
+-1.043719	inform_time_left inform_risk_spreading no
+-1.26392	inform_time_left inform_risk_spreading yes
+-0.03724806	db_query inform_robot_available inform_moving
+-1.359634	db_query inform_robot_available inform_robot_battery
+-1.78482	db_query inform_robot_available okay
+-0.2225271	inform_robot_battery inform_robot_available inform_moving
+-0.2860617	inform_robot_not_available inform_robot_available inform_moving
+-0.178418	okay inform_robot_available inform_moving
+-0.6204671	ack_misunderstood inform_robot_battery inform_arrival
+-0.2225271	inform_damage_inspection inform_robot_battery inform_risk
+-0.1249387	inform_moving inform_robot_battery inform_robot_eta
+-0.6204671	inform_robot_available inform_robot_battery inform_moving
+-1.412859	inform_robot_eta inform_robot_battery holdon2seconds
+-0.7132105	inform_robot_eta inform_robot_battery inform_arrival
+-1.412859	inform_robot_eta inform_robot_battery inform_robot_eta
+-1.192658	inform_robot_eta inform_robot_battery inform_robot_progress
+-0.5882717	inform_robot_eta inform_robot_battery inform_robot_velocity
+-1.192658	inform_robot_eta inform_robot_battery inform_time_left
+-0.9876727	inform_robot_eta inform_robot_battery inform_wind
+-0.3986183	inform_robot_progress inform_robot_battery inform_arrival
+-1.000678	inform_robot_status inform_robot_battery info_not_available
+-0.7804779	inform_robot_status inform_robot_battery inform_robot_eta
+-0.7804779	inform_robot_status inform_robot_battery inform_robot_status
+-1.000678	inform_robot_status inform_robot_battery inform_wind
+-1.000678	inform_robot_velocity inform_robot_battery holdon2seconds
+-0.7804779	inform_robot_velocity inform_robot_battery inform_arrival
+-0.7804779	inform_robot_velocity inform_robot_battery inform_robot_eta
+-1.000678	inform_robot_velocity inform_robot_battery inform_time_left
+-0.824587	inform_time_left inform_robot_battery info_not_available
+-0.824587	inform_time_left inform_robot_battery inform_robot_status
+-0.7665951	inform_wind inform_robot_battery inform_arrival
+-0.2225271	no inform_robot_battery inform_robot_eta
+-0.7665951	UNK inform_robot_eta inform_time_left
+-1.42573	inform_moving inform_robot_eta </s>
+-1.850916	inform_moving inform_robot_eta UNK
+-1.630716	inform_moving inform_robot_eta holdon2seconds
+-1.151268	inform_moving inform_robot_eta inform_arrival
+-1.42573	inform_moving inform_robot_eta inform_risk_spreading
+-0.9294189	inform_moving inform_robot_eta inform_robot_battery
+-1.298341	inform_moving inform_robot_eta inform_robot_eta
+-1.298341	inform_moving inform_robot_eta inform_robot_progress
+-1.630716	inform_moving inform_robot_eta inform_robot_status
+-1.298341	inform_moving inform_robot_eta inform_robot_velocity
+-0.5492077	inform_moving inform_robot_eta inform_time_left
+-1.516511	inform_moving inform_robot_eta inform_wind
+-1.850916	inform_moving inform_robot_eta no
+-0.6996483	inform_risk_spreading inform_robot_eta inform_time_left
+-0.8658453	inform_robot_battery inform_robot_eta holdon2seconds
+-1.200251	inform_robot_battery inform_robot_eta inform_arrival
+-0.9800503	inform_robot_battery inform_robot_eta inform_robot_progress
+-0.9800503	inform_robot_battery inform_robot_eta inform_robot_velocity
+-1.200251	inform_robot_battery inform_robot_eta inform_time_left
+-1.200251	inform_robot_battery inform_robot_eta inform_wind
+-1.283225	inform_robot_eta inform_robot_eta </s>
+-0.9488196	inform_robot_eta inform_robot_eta inform_arrival
+-0.5835766	inform_robot_eta inform_robot_eta inform_robot_eta
+-1.063025	inform_robot_eta inform_robot_eta inform_robot_status
+-1.063025	inform_robot_eta inform_robot_eta inform_time_left
+-0.642439	inform_robot_progress inform_robot_eta inform_arrival
+-1.067625	inform_robot_progress inform_robot_eta inform_robot_status
+-0.8474247	inform_robot_progress inform_robot_eta inform_time_left
+-1.802311	inform_robot_status inform_robot_eta UNK
+-1.377125	inform_robot_status inform_robot_eta ack_misunderstood
+-1.377125	inform_robot_status inform_robot_eta holdon2seconds
+-1.467905	inform_robot_status inform_robot_eta inform_arrival
+-1.58211	inform_robot_status inform_robot_eta inform_risk_spreading
+-0.7668703	inform_robot_status inform_robot_eta inform_robot_battery
+-1.58211	inform_robot_status inform_robot_eta inform_robot_eta
+-1.102662	inform_robot_status inform_robot_eta inform_robot_progress
+-1.249735	inform_robot_status inform_robot_eta inform_robot_velocity
+-0.7346855	inform_robot_status inform_robot_eta inform_time_left
+-0.8016323	inform_robot_status inform_robot_eta inform_wind
+-0.8757396	inform_robot_velocity inform_robot_eta holdon2seconds
+-0.8757396	inform_robot_velocity inform_robot_eta inform_robot_eta
+-0.8757396	inform_robot_velocity inform_robot_eta inform_time_left
+-0.7515835	inform_time_left inform_robot_eta inform_robot_battery
+-0.9565692	inform_time_left inform_robot_eta inform_robot_progress
+-0.9565692	inform_time_left inform_robot_eta inform_robot_status
+-1.17677	inform_time_left inform_robot_eta inform_wind
+-1.000678	inform_wind inform_robot_eta holdon2seconds
+-1.000678	inform_wind inform_robot_eta inform_risk_spreading
+-1.000678	inform_wind inform_robot_eta inform_robot_progress
+-1.000678	inform_wind inform_robot_eta inform_time_left
+-0.6204671	no inform_robot_eta UNK
+-0.399401	db_query inform_robot_not_available inform_robot_available
+-0.824587	db_query inform_robot_not_available okay
+-0.3986183	inform_alert_emergency inform_robot_not_available inform_moving
+-0.8757396	inform_emergency_status inform_robot_not_available </s>
+-0.5413342	inform_emergency_status inform_robot_not_available request_robot_emergency
+-0.6043867	inform_robot_not_available inform_robot_not_available inform_moving
+-0.5463948	request_robot_emergency inform_robot_not_available db_query
+-0.7665951	request_robot_emergency inform_robot_not_available inform_moving
+-0.2225271	request_robot_type inform_robot_not_available inform_robot_not_available
+-0.3986183	inform_moving inform_robot_progress inform_robot_progress
+-0.4002667	inform_robot_battery inform_robot_progress inform_robot_velocity
+-1.043719	inform_robot_eta inform_robot_progress holdon2seconds
+-0.5642715	inform_robot_eta inform_robot_progress inform_arrival
+-1.26392	inform_robot_eta inform_robot_progress inform_robot_eta
+-1.043719	inform_robot_eta inform_robot_progress inform_robot_progress
+-0.9295144	inform_robot_eta inform_robot_progress inform_robot_velocity
+-0.824587	inform_robot_progress inform_robot_progress inform_arrival
+-0.6043867	inform_robot_progress inform_robot_progress inform_robot_eta
+-0.824587	inform_robot_progress inform_robot_progress inform_time_left
+-0.6043867	inform_robot_status inform_robot_progress inform_arrival
+-0.6555392	inform_robot_velocity inform_robot_progress inform_arrival
+-0.8757396	inform_robot_velocity inform_robot_progress inform_robot_eta
+-0.8757396	inform_robot_velocity inform_robot_progress inform_time_left
+-0.479448	inform_time_left inform_robot_progress inform_arrival
+-0.3986183	holdon2seconds inform_robot_status inform_arrival
+-0.2225271	inform_arrival inform_robot_status inform_inspection
+-0.6204671	inform_inspection inform_robot_status inform_emergency_status
+-1.802311	inform_moving inform_robot_status ack_misunderstood
+-1.58211	inform_moving inform_robot_status holdon2seconds
+-1.249735	inform_moving inform_robot_status inform_robot_battery
+-0.1818436	inform_moving inform_robot_status inform_robot_eta
+-1.377125	inform_moving inform_robot_status inform_time_left
+-1.58211	inform_moving inform_robot_status inform_wind
+-0.6204671	inform_risk_spreading inform_robot_status </s>
+-0.8757396	inform_robot_battery inform_robot_status inform_emergency_status
+-0.8757396	inform_robot_battery inform_robot_status inform_robot_battery
+-0.8757396	inform_robot_battery inform_robot_status inform_robot_eta
+-0.8757396	inform_robot_battery inform_robot_status inform_robot_status
+-1.067625	inform_robot_eta inform_robot_status </s>
+-1.067625	inform_robot_eta inform_robot_status inform_arrival
+-0.642439	inform_robot_eta inform_robot_status inform_robot_eta
+-1.067625	inform_robot_eta inform_robot_status inform_robot_velocity
+-0.5235571	inform_robot_velocity inform_robot_status inform_robot_eta
+-0.1890562	inform_robot_wait inform_robot_status inform_robot_eta
+-0.7012967	inform_time_left inform_robot_status inform_robot_eta
+-0.9214971	inform_time_left inform_robot_status inform_robot_progress
+-0.3986183	inform_wind inform_robot_status inform_robot_progress
+-0.6204671	okay inform_robot_status inform_arrival
+-0.3986183	UNK inform_robot_velocity inform_arrival
+-0.3986183	holdon2seconds inform_robot_velocity inform_arrival
+-0.6555392	inform_moving inform_robot_velocity inform_robot_eta
+-0.6555392	inform_robot_battery inform_robot_velocity inform_arrival
+-0.8757396	inform_robot_battery inform_robot_velocity inform_robot_progress
+-0.9295144	inform_robot_eta inform_robot_velocity inform_arrival
+-0.9295144	inform_robot_eta inform_robot_velocity inform_robot_battery
+-1.26392	inform_robot_eta inform_robot_velocity inform_robot_eta
+-1.26392	inform_robot_eta inform_robot_velocity inform_robot_status
+-1.043719	inform_robot_eta inform_robot_velocity inform_wind
+-0.7012967	inform_robot_progress inform_robot_velocity inform_arrival
+-0.7012967	inform_time_left inform_robot_velocity inform_arrival
+-0.9214971	inform_time_left inform_robot_velocity inform_robot_progress
+-0.9214971	inform_time_left inform_robot_velocity inform_wind
+-0.5870917	inform_wind inform_robot_velocity inform_arrival
+-0.9214971	inform_wind inform_robot_velocity inform_robot_battery
+-0.3986183	no inform_robot_velocity inform_time_left
+-1.319437	holdon2seconds inform_robot_wait inform_risk_spreading
+-1.319437	holdon2seconds inform_robot_wait inform_robot_eta
+-0.2218488	holdon2seconds inform_robot_wait inform_robot_status
+-1.319437	holdon2seconds inform_robot_wait inform_wind
+-1.319437	holdon2seconds inform_robot_wait no
+-0.365243	actionperformed inform_symptom inform_activate_emergency_shutdown
+-1.57471	inform_alert_emergency inform_symptom actionperformed
+-0.4490925	inform_alert_emergency inform_symptom inform_activate_emergency_shutdown
+-1.354509	inform_alert_emergency inform_symptom inform_robot_not_available
+-0.39794	inform_alert_emergency inform_symptom request_pa_announcement
+-1.354509	inform_alert_emergency inform_symptom request_robot_type
+-0.2225271	okay inform_symptom inform_activate_emergency_shutdown
+-0.7665951	UNK inform_time_left inform_arrival
+-0.9214971	holdon2seconds inform_time_left inform_robot_velocity
+-0.5235571	inform_activate_emergency_shutdown inform_time_left request_pa_announcement
+-0.5235571	inform_activate_emergency_shutdown inform_time_left request_robot_type
+-1.11956	inform_inspection inform_time_left holdon2seconds
+-0.1318876	inform_inspection inform_time_left inform_emergency_status
+-1.544746	inform_inspection inform_time_left inform_robot_battery
+-1.324546	inform_inspection inform_time_left inform_wind
+-0.9214971	inform_risk_spreading inform_time_left inform_arrival
+-0.9214971	inform_risk_spreading inform_time_left inform_robot_eta
+-0.9214971	inform_risk_spreading inform_time_left inform_robot_velocity
+-0.824587	inform_robot_battery inform_time_left inform_arrival
+-0.824587	inform_robot_battery inform_time_left inform_robot_eta
+-0.824587	inform_robot_battery inform_time_left inform_robot_status
+-1.699648	inform_robot_eta inform_time_left UNK
+-1.479448	inform_robot_eta inform_time_left ack_misunderstood
+-0.8750613	inform_robot_eta inform_time_left inform_arrival
+-0.5477023	inform_robot_eta inform_time_left inform_risk_spreading
+-1.274462	inform_robot_eta inform_time_left inform_robot_battery
+-1.365243	inform_robot_eta inform_time_left inform_robot_eta
+-1.274462	inform_robot_eta inform_time_left inform_robot_progress
+-1.699648	inform_robot_eta inform_time_left inform_robot_status
+-1.365243	inform_robot_eta inform_time_left inform_robot_velocity
+-1.479448	inform_robot_eta inform_time_left inform_wind
+-0.6204671	inform_robot_progress inform_time_left inform_robot_eta
+-0.824587	inform_robot_status inform_time_left inform_risk_spreading
+-0.479448	inform_robot_velocity inform_time_left inform_robot_eta
+-0.9214971	inform_wind inform_time_left actionperformed
+-0.9214971	inform_wind inform_time_left inform_alert_emergency
+-0.7012967	inform_wind inform_time_left inform_emergency_status
+-0.2225271	okay inform_time_left actionperformed
+-0.2225271	inform_alert_emergency inform_wind inform_symptom
+-0.4002667	inform_inspection inform_wind inform_time_left
+-0.6204671	inform_moving inform_wind inform_arrival
+-0.6204671	inform_moving inform_wind inform_robot_eta
+-0.7665951	inform_robot_battery inform_wind inform_arrival
+-0.341409	inform_robot_battery inform_wind inform_robot_eta
+-1.243716	inform_robot_eta inform_wind ack_misunderstood
+-0.8185303	inform_robot_eta inform_wind holdon2seconds
+-1.243716	inform_robot_eta inform_wind inform_arrival
+-0.4191293	inform_robot_eta inform_wind inform_robot_velocity
+-0.4002667	inform_robot_status inform_wind inform_robot_eta
+-0.399401	inform_robot_velocity inform_wind inform_arrival
+-1.03544	inform_time_left inform_wind inform_alert_emergency
+-1.03544	inform_time_left inform_wind inform_emergency_status
+-1.03544	inform_time_left inform_wind inform_robot_battery
+-1.03544	inform_time_left inform_wind inform_robot_velocity
+-0.4002667	request_attention inform_wind inform_time_left
+-0.2725415	<s> intro_hello inform_alert_emergency
+-0.3476062	<s> intro_hello request_attention
+-1.993379	<s> intro_hello yes
+-0.2860617	UNK intro_hello request_attention
+-0.2225271	holdon2seconds intro_hello request_attention
+-0.2225271	UNK mission_timeout </s>
+-0.03476211	holdon2seconds mission_timeout </s>
+-0.2225271	no mission_timeout </s>
+-0.3986183	UNK no UNK
+-0.2225271	holdon2seconds no UNK
+-0.3986183	inform_risk_spreading no UNK
+-0.5235571	inform_robot_status no inform_robot_eta
+-0.2225271	inform_robot_wait no inform_robot_status
+-0.5413342	ack_misunderstood okay inform_moving
+-0.2225271	inform_robot_available okay inform_moving
+-0.5235571	inform_robot_not_available okay inform_robot_available
+-0.2225271	inform_time_left okay inform_robot_status
+-0.2225271	mission_timeout okay actionperformed
+-0.3493347	request_pa_announcement okay actionperformed
+-1.28108	request_pa_announcement okay inform_moving
+-1.501281	request_pa_announcement okay inform_symptom
+-0.4036923	request_pa_announcement okay request_robot_type
+-0.258278	request_robot_emergency okay db_query
+-0.3832167	request_robot_emergency okay inform_moving
+-1.243716	request_robot_inspect_damage okay UNK
+-0.3679768	request_robot_inspect_damage okay db_query
+-0.3679768	request_robot_inspect_damage okay inform_moving
+-0.3869446	request_robot_type okay db_query
+-0.2486419	request_robot_type okay inform_moving
+-0.122572	intro_hello request_attention inform_alert_emergency
+-1.281641	intro_hello request_attention inform_wind
+-1.154252	intro_hello request_attention request_attention
+-1.706827	intro_hello request_attention yes
+-0.341409	request_attention request_attention inform_alert_emergency
+-0.9628898	inform_activate_emergency_shutdown request_pa_announcement inform_symptom
+-0.7426894	inform_activate_emergency_shutdown request_pa_announcement okay
+-0.5377037	inform_activate_emergency_shutdown request_pa_announcement request_robot_type
+-1.33647	inform_alert_emergency request_pa_announcement inform_activate_emergency_shutdown
+-0.1597008	inform_alert_emergency request_pa_announcement okay
+-1.11627	inform_alert_emergency request_pa_announcement request_robot_type
+-1.17677	inform_symptom request_pa_announcement ack_misunderstood
+-0.07918125	inform_symptom request_pa_announcement okay
+-0.2225271	inform_time_left request_pa_announcement request_pa_announcement
+-0.2225271	ack_misunderstood request_robot_emergency inform_robot_not_available
+-1.790729	inform_emergency_status request_robot_emergency ack_misunderstood
+-0.6931404	inform_emergency_status request_robot_emergency db_query
+-0.526809	inform_emergency_status request_robot_emergency inform_moving
+-1.365543	inform_emergency_status request_robot_emergency inform_robot_not_available
+-0.4220737	inform_emergency_status request_robot_emergency okay
+-0.6996483	inform_robot_not_available request_robot_emergency inform_moving
+-0.6996483	inform_robot_not_available request_robot_emergency request_robot_emergency
+-1.344749	inform_emergency_solved request_robot_inspect_damage ack_misunderstood
+-0.7403627	inform_emergency_solved request_robot_inspect_damage db_query
+-0.7403627	inform_emergency_solved request_robot_inspect_damage inform_moving
+-0.3212334	inform_emergency_solved request_robot_inspect_damage okay
+-0.6555392	actionperformed request_robot_type db_query
+-0.1760913	actionperformed request_robot_type okay
+-1.501281	inform_activate_emergency_shutdown request_robot_type ack_misunderstood
+-0.9487056	inform_activate_emergency_shutdown request_robot_type db_query
+-0.6766936	inform_activate_emergency_shutdown request_robot_type inform_moving
+-0.30103	inform_activate_emergency_shutdown request_robot_type okay
+-0.341409	inform_alert_emergency request_robot_type inform_moving
+-0.2860617	inform_symptom request_robot_type inform_moving
+-0.9054167	okay request_robot_type db_query
+-0.1249387	okay request_robot_type okay
+-0.4321898	request_pa_announcement request_robot_type inform_moving
+-0.09837099	request_robot_type request_robot_type inform_moving
+-0.5235571	<s> yes okay
+-0.2225271	intro_hello yes request_attention
+-0.6204671	yes yes holdon2seconds
+-0.6204671	yes yes yes
+
+\end\

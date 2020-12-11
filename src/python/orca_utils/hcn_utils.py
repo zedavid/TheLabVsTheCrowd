@@ -660,7 +660,6 @@ def compute_scores(y_test,
                                 if DEBUG:
                                     print(action_set[pred[d, t]])
                                     input(condition)
-                                logging.warning('No utterance available for {} at this point of the dialogue'.format(action_set[pred[d, t]]))
                                 gen_turn_dict['utt_pred'] = None
                             else:
                                 gen_turn_dict['utt_pred'] = random.choice(candidate_utterances)
@@ -764,7 +763,6 @@ def compute_scores(y_test,
                     #end_state_success.append(1)
 
         if not end_generated_dialogue:
-            logging.warning('no end state reached: {}'.format(','.join(generated_subtask_sequence)))
             if set(generated_subtask_sequence) == set(['inspect', 'extinguish', 'assess_damage']):
                 mission_success.append(1)
                 if generate_output:

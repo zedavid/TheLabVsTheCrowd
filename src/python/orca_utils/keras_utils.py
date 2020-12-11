@@ -4,7 +4,7 @@ import tensorflow as tf
 
 from tensorflow.keras import layers
 
-tf.get_logger().setLevel('INFO')
+tf.get_logger().setLevel('ERROR')
 
 def configure_model(model_info, lstm_type='', optimizer = tf.compat.v1.train.AdamOptimizer(0.001)):
 

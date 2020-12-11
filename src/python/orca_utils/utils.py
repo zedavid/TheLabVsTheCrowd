@@ -100,7 +100,6 @@ def get_dialogue_success(dial_id, log_dir):
                 break
 
     if dialogue is None:
-        logging.warning(f'could\'t find corresponding file for {dial_id}')
         return None
 
     for evt in dialogue['logs']:

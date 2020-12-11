@@ -92,7 +92,7 @@ class NLG():
 
         for fs in self.fixed_dialogue_acts:
             if fs in self.states_nlg:
-                logging.info('{} state information already loaded as a regular states'.format(fs))
+                continue
             else:
                 self.states_nlg[fs] = state_utils.PreDefState(fs,init_counter)
                 self.states_with_no_transitions.append(fs)
@@ -420,7 +420,7 @@ def preProcess(utt, interaction_manager, expression_regex =r"\[(.*?)\]"):
 
         for combo_dict in gen_combinations(sub_dict,list(slots_to_replace)):
             if keys_available_set(combo_dict) != slots_to_replace:
-                logging.warning('Slots with values are different than the slots to replace')
+                #Slots with values are different than the slots to replace
                 continue
             ca_dict = {'utterance': multiple_replace(combo_dict,utt), 'gestures': ';'.join(gesture)}
             if '{robot_id}' in combo_dict:

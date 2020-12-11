@@ -9,7 +9,7 @@ import random
 
 import matplotlib.pyplot as plt
 
-from orca_utils import rig_utils, hcn_utils, nlg_utils, dialogue_utils, dialogue_utils, utils
+from orca_utils import rig_utils, hcn_utils, nlg_utils, dialogue_utils, utils
 
 DEBUG = False
 

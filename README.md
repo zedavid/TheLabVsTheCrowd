@@ -48,7 +48,7 @@ Google News embeddigns can be downloaded from [here](https://drive.google.com/fi
 
 The script to execute is `src/python/train_x_val_batch.sh`:
 
-```./train_x_val_batch.sh <train|eval> <lab|mturk_full|mturk_partial|>```
+```./train_x_val_batch.sh <train|eval> <lab|mturk_full|mturk_partial>```
 
 ### Cross-data experiments
 

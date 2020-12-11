@@ -260,12 +260,6 @@ class State():
             if 'transition_states' in condition_settings:
                 for state in condition_settings['transition_states']:
                      self.transitions.append(state)
-        if self.utterances == []:
-            logging.warning('No utterances found in state {}'.format(self.name))
-
-        if self.transitions == []:
-            logging.warning('No transitions found in state {}'.format(self.name))
-
 
     def add_utterances(self,utterance_list):
 

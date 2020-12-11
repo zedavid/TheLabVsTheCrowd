@@ -14,8 +14,6 @@ class dialogue:
 
     def reset_dialogue(self):
 
-        logging.info('restarting new dialogue')
-
         self.mission_start = time.time()
 
         self.state_history = []
